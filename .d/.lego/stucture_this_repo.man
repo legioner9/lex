@@ -1,0 +1,7 @@
+## /_Gnr_fns 
+### /actio : fns from plt
+### /primus : fns from fonsh
+### /secundus : fns from fonsh
+
+## /_Gnr_git 
+### /init examples for ggit_ -_init
