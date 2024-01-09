@@ -1,0 +1,16 @@
+${HOME}/.enterrc@enterrc
+
+${HOME}/.bashrc@bashrc
+${HOME}/.bash_profile@bash_profile
+
+${HOME}/.gitconfig@gitconfig
+
+${HOME}/.vimrc@vimrc
+${HOME}/.clang-format@clang-format
+${HOME}/.links@links
+
+${HOME}/.fonsh_path@fonsh_path
+${HOME}/.repo_path@repo_path
+${HOME}/.plt_path@plt_path
+
+${HOME}/.rbenv@rbenv 
