@@ -6,13 +6,17 @@ n=1
 #     # e
 # done
 
-cd ${PD_PATH}/.d/.mul/nmw_opi__/mask
+cd ${PD_PATH}/.d/.mul/nmw_opi_/mask/mask_num.d || {
+    plt_info "NOT_DIR : '${PD_PATH}/.d/.mul/nmw_opi_/mask/mask_num.d' : return 1"
+    return 1
+}
 
-if [ -f "$(pwd)"/mask_num.lst ];then
-plt_info "NOT_FILE : $(pwd)/mask_num.lst : ret "
+if ! [ -f "$(pwd)"/$1 ]; then
+    plt_info "NOT_FILE : '$(pwd)/$1' : return 1"
+    return 1 
 fi
-
-: >mask_num.lst
+plt_pause "DO? : fill '$(pwd)/$1'"
+: >"$1"
 for ((i = 1; i < 180; i++)); do
-    echo $i >>mask_num.lst
+    echo $i >>"$1"
 done
