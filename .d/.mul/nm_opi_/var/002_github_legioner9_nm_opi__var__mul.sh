@@ -36,10 +36,10 @@
     pull_net_strong="${clone_net}"
     pull_local_strong="${clone_local}"
 
-    push_net_strong="git@github.com:legioner9/${name_repo}.git<>GITHUB_LEGIONER9_${name_repo}><git@gitflic.ru:legioner9/${name_repo}.git<>GITFLIC_LEGIONER9_${name_repo}"
+    push_net_strong="git@github.com:legioner9/${name_repo}.git<>GITHUB_LEGIONER9_${name_repo}"
     push_local_strong="${dir_bare}/${name_repo}<>HOME_REPOBARE_BARE_${name_repo}"
 
-    push_net=
+    push_net="git@gitflic.ru:legioner9/${name_repo}.git<>GITFLIC_LEGIONER9_${name_repo}"
     push_local="/run/media/${USER}/MY_ONE/REPOBARE/_bare/${name_repo}<>MY_ONE_REPOBARE_BARE_${name_repo}></run/media/${USER}/TOSHIBA_EXT/REPOBARE/_bare/${name_repo}<>TOSHIBA_EXT_REPOBARE_BARE_${name_repo}></run/media/${USER}/TOSH/REPOBARE/_bare/${name_repo}<>TOSH_REPOBARE_BARE_${name_repo}"
 
     # wrp_fifs1_ mkdir -p ${dir_repo}/ -cnd1
