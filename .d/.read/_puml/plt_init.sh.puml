@@ -1,0 +1,138 @@
+@startuml
+
+scale 1000*500
+autonumber 
+
+participant sys
+participant ".bashrc" as brc
+participant ".enterrc" as erc
+participant ".fonshrc" as frc
+participant ".pltrc" as prc
+participant github as gh
+participant "plt/.d/.repo/bcp_sys_/" as bcp_fs
+
+== 1_upd_all_alt ==
+ref over sys
+epm full-upgrad
+
+apt-get install
+epm play yandex-
+end ref
+
+== 2_reset_plt_fonsh ==
+ref over sys : rm -f "$HOME"/ REPOBARE/ .fonsh_path .plt_path .repo_path
+
+== 3_git_init ==
+ref over sys
+rm -rf ${HOME}/.ssh
+unzip ${HOME}/read.zip -d ${HOME}
+end ref
+
+== 4_git_clone ==
+gh -> sys: clone git@github.com: plt, communis, fonsh
+
+== 5_first_copy_dotfiles ==
+bcp_fs -> sys:tar -xzvf repo_path plt_path fonsh_path
+ref over brc : .bashrc:add str: . ~/.enterrc 
+ref over sys : rm ${HOME}/.vscode-oss
+
+== 6_first_start_bash ==
+ref over sys
+. $HOME/.bashrc
+
+
+bcp_l2d_ -_bcp bashrc
+bcp_sys_ -_dpl
+apt_alt_ 1
+end ref
+
+sys -> erc : . .bashrc
+
+note right
+<code>
+if [ -f ~/.enterrc ]; then . ~/.enterrc; fi
+</code>
+end note
+
+erc -> erc : source .pltrc
+
+note right
+<code>
+
+Hardcore fonsh_path plt_path
+
+enter_sys_plt:
+FONSH_PATH=$(cat ~/.fonsh_path)
+PLT_PATH=$(cat ~/.plt_path)
+REPO_PATH=$(cat ~/.repo_path)
+def c_up
+def rr
+
+. ${PLT_PATH}/.pltrc
+. ${FONSH_PATH}/.fonshrc
+
+c_up "${PLT_PATH}"/.d/.sh/.bashrc
+
+eval "$(ssh-agent -s)"
+export MANOPT="-L ru"
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1='\033[35;40m\u@\H \w$(__git_ps1 " (%s)")\$\033[0m '
+
+
+. "${COMMUNIS_PATH}/Deploy_store/.qa/lib/user/0_ini.sh"
+
+c_up "${COMMUNIS_PATH}"/Deploy_store/.qa
+c_up "${COMMUNIS_PATH}"/Deploy_store/.os/
+c_up "${COMMUNIS_PATH}"/Deploy_store/.os/.sh/
+c_up "${COMMUNIS_PATH}"/Deploy_store/
+
+add_PATH_
+
+</code>
+end note
+
+erc -> prc : source .fonshrc
+
+note right
+<code>
+
+def c_up
+. "${PLT_PATH}"/.d/.config/env.sh
+. "${PLT_PATH}"/.d/.frc/a.frc
+c_up "${PLT_PATH}/actio"
+
+</code>
+end note
+
+erc -> frc : source .fonshrc
+
+note right
+<code>
+
+def c_up
+. "${FONSH_PATH}"/.d/.config/env.sh
+. "${FONSH_PATH}"/.d/.frc/a.frc
+c_up "${FONSH_PATH}/actio"
+
+</code>
+end note
+
+== 7_post_first_ ==
+
+ref over sys
+. ${PLT_PATH}/.d/.etc/nginx/cp_scena_1_conf.sh
+end ref
+
+sys -> sys : . ${PLT_PATH}/.d/.etc/nginx/cp_scena_1_conf.sh
+
+note right
+<code>
+
+sudo cp -v ${PLT_PATH}/.d/.etc/nginx/sites-available.d/scena_1.conf /etc/nginx/sites-available.d/scena_1.conf
+sudo ln -sv /etc/nginx/sites-available.d/scena_1.conf /etc/nginx/sites-enabled.d/scena_1.conf
+
+</code>
+end note
+
+@enduml
