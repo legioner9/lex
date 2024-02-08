@@ -23,6 +23,11 @@ gitflic_legioner9 single carppafcp
 gitflic_legioner9 single ppafcp
 gitflic_legioner9 single only_add_files
 gitflic_legioner9 single only_add_remote
+gitflic_legioner9 plt carp
+gitflic_legioner9 plt carppafcp
+gitflic_legioner9 plt ppafcp
+gitflic_legioner9 plt only_add_files
+gitflic_legioner9 plt only_add_remote
 github_legioner9 tgu_tst carp
 github_legioner9 tgu_tst carppafcp
 github_legioner9 tgu_tst ppafcp
@@ -48,6 +53,11 @@ github_legioner9 single carppafcp
 github_legioner9 single ppafcp
 github_legioner9 single only_add_files
 github_legioner9 single only_add_remote
+github_legioner9 plt carp
+github_legioner9 plt carppafcp
+github_legioner9 plt ppafcp
+github_legioner9 plt only_add_files
+github_legioner9 plt only_add_remote
 MY_ONE tgu_tst carp
 MY_ONE tgu_tst carppafcp
 MY_ONE tgu_tst ppafcp
@@ -73,6 +83,11 @@ MY_ONE single carppafcp
 MY_ONE single ppafcp
 MY_ONE single only_add_files
 MY_ONE single only_add_remote
+MY_ONE plt carp
+MY_ONE plt carppafcp
+MY_ONE plt ppafcp
+MY_ONE plt only_add_files
+MY_ONE plt only_add_remote
 TOSH tgu_tst carp
 TOSH tgu_tst carppafcp
 TOSH tgu_tst ppafcp
@@ -98,6 +113,11 @@ TOSH single carppafcp
 TOSH single ppafcp
 TOSH single only_add_files
 TOSH single only_add_remote
+TOSH plt carp
+TOSH plt carppafcp
+TOSH plt ppafcp
+TOSH plt only_add_files
+TOSH plt only_add_remote
 TOSHIBA_EXT tgu_tst carp
 TOSHIBA_EXT tgu_tst carppafcp
 TOSHIBA_EXT tgu_tst ppafcp
@@ -123,3 +143,8 @@ TOSHIBA_EXT single carppafcp
 TOSHIBA_EXT single ppafcp
 TOSHIBA_EXT single only_add_files
 TOSHIBA_EXT single only_add_remote
+TOSHIBA_EXT plt carp
+TOSHIBA_EXT plt carppafcp
+TOSHIBA_EXT plt ppafcp
+TOSHIBA_EXT plt only_add_files
+TOSHIBA_EXT plt only_add_remote
