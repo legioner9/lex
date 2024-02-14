@@ -21,6 +21,8 @@ return 1 from 3_git_init.sh
         return 1
     fi
 
+    else
+
     echo "continue with create keys from zip :: only y or any"
 
     read y2

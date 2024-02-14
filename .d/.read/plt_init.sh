@@ -47,6 +47,7 @@ fntmp_654fe0b9ed() {
     #-------------------------------
 
     PPWW_654fe0b9ed="$(pwd)"
+    dot_repo
 
     echo -e "${GREEN}\$PPWW_654fe0b9ed = $PPWW_654fe0b9ed${NORMAL}" #print variable
 
