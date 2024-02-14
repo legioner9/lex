@@ -2,7 +2,9 @@
 
 echo -e "${GREEN} start 5_first_copy_dotfiles.sh ${NORMAL}" #print variable
 
-path_tar_dir="${HOME}/REPOBARE/_repo/lex/.d/.repo/bcp_sys_"
+#! dot_repo_1234234 from plt_init_.sh = .repo
+
+path_tar_dir="${dot_repo_1234234}/bcp_sys_"
 arr_tar_file=(enterrc repo_path plt_path fonsh_path pd_path pd_read)
 
 for item in ${arr_tar_file[@]};do

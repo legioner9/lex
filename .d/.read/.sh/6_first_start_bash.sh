@@ -18,4 +18,4 @@ fi
 
 "${_bcp_sys_}" -_dpl
 
-"${_apt_alt_}" 1
+"${_apt_alt_}"

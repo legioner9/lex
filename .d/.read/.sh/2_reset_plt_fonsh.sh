@@ -10,6 +10,8 @@ if [[ "${RESET_PLT_FONSH_TO_DEFAULT_}" == "y" ]]; then
 
     rm -fvi "$HOME"/.fonsh_path
     rm -fvi "$HOME"/.plt_path
+    rm -fvi "$HOME"/.pd_read
+    rm -fvi "$HOME"/.pd_path
     rm -fvi "$HOME"/.repo_path
     rm -fvi "$HOME"/.enterrc
 

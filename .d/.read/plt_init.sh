@@ -47,7 +47,9 @@ fntmp_654fe0b9ed() {
     #-------------------------------
 
     PPWW_654fe0b9ed="$(pwd)"
-    dot_repo
+    dot_repo_1234234="$(pwd)"/../.repo
+
+    read -p "INFO dot dir repo \${dot_repo} = ${dot_repo_1234234}"
 
     echo -e "${GREEN}\$PPWW_654fe0b9ed = $PPWW_654fe0b9ed${NORMAL}" #print variable
 
