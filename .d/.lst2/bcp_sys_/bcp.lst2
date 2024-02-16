@@ -10,11 +10,13 @@ ${HOME}/.digrc@digrc
 
 ${HOME}/.clang-format@clang-format
 ${HOME}/.links@links
+${HOME}/.tmux.conf@tmux_conf
 
 ${HOME}/.fonsh_path@fonsh_path
 ${HOME}/.repo_path@repo_path
 ${HOME}/.plt_path@plt_path
 ${HOME}/.pd_path@pd_path
 ${HOME}/.pd_read@pd_read
+
 
 #${HOME}/.rbenv@rbenv 
