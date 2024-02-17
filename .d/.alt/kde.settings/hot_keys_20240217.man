@@ -1,0 +1,5 @@
+mate-terminal ^F2
+codium ^F3
+yandex-browser-stable ^F4
+telegram-desktop ^F5
+code ^F6
