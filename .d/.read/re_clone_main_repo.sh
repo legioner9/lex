@@ -31,13 +31,13 @@ fntmp_45gbyher454() {
 
     read -p "INFO pwd=${PPWW_45gbyher454} ; continue"
 
-    PPWW_45gbyher454 "DO? : REMOVE ${repo_name_arr_45gbyher454[*]} in $HOME/REPOBARE/_repo: " && {
+    is_yes_45gbyher454 "DO? : REMOVE ${repo_name_arr_45gbyher454[*]} in $HOME/REPOBARE/_repo: " && {
         for item_45gbyher454 in ${repo_name_arr_45gbyher454[@]}; do
-            rm -rfvi "${HOME}"/REPOBARE/_repo/"${item_45gbyher454}"
+            rm -rfv "${HOME}"/REPOBARE/_repo/"${item_45gbyher454}"
         done
     }
 
-    PPWW_45gbyher454 "DO? : CLONE ${repo_name_arr_45gbyher454[*]} to $HOME/REPOBARE/_repo: " && {
+    is_yes_45gbyher454 "DO? : CLONE ${repo_name_arr_45gbyher454[*]} to $HOME/REPOBARE/_repo: " && {
         if [ -f "${PPWW_45gbyher454}/.sh/4_git_clone.sh" ]; then
             . "${PPWW_45gbyher454}/.sh/4_git_clone.sh"
         fi
