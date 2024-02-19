@@ -17,6 +17,6 @@ if ! [ -f "$(pwd)"/$1 ]; then
 fi
 plt_pause "DO? : fill '$(pwd)/$1'"
 : >"$1"
-for ((i = 1; i < 180; i++)); do
+for ((i = 1; i < 300; i++)); do
     echo $i >>"$1"
 done
