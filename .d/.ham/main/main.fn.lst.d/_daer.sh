@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "${BLUE}--- that file://${REPO_PATH}/${name_repo}/.d/.ham/main/main.fn.lst.d/daer.sh ---${NORMAL}" #sistem info mesage
+echo -e "${BLUE}--- that file://${REPO_PATH}/${name_repo}/.d/.ham/main/main.fn.lst.d/daer._sh ---${NORMAL}" #sistem info mesage
 echo -e "${HLIGHT}--- zip ${REPO_PATH}/lex/.d/.gelu/.daer ${REPO_PATH}/lex/.d/.read ---${NORMAL}" #start files
 
 cd ${REPO_PATH}/lex/.d/.gelu || plt_exit
