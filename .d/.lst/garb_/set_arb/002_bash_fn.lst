@@ -1,2 +1,2 @@
 ${PLT_PATH}/.d/.arb/bsh.arb
-${PLT_PATH}/.d/.arb/osh.arbopenssl s_client -connect smtp.mail.ru:465 -crlf
+${PLT_PATH}/.d/.arb/osh.arb
