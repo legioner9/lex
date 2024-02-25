@@ -12,7 +12,9 @@ mkdir -pv "$HOME"/REPOBARE/_repo
 
 read -p "INFO: elegendy bare ENTER"
 
-bare_arr=(git@gitflic.ru:legioner9
+bare_arr=(https://gitflic.ru/project/legioner9
+    https://github.com/legioner9
+    git@gitflic.ru:legioner9
     git@github.com:legioner9
     /run/media/"${USER}"/MY_ONE/REPOBARE/_bare
     /run/media/"${USER}"/TOSHIBA_EXT/REPOBARE/_bare
@@ -23,7 +25,7 @@ repo_name_arr=(plt
     communis
     fonsh
     lex
-    )
+)
 
 cd "$HOME"/REPOBARE/_repo || {
     read -p "$HOME/REPOBARE/_repo not EXIST: return 1"
