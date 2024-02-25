@@ -2,10 +2,10 @@
 
 echo -e "${GREEN} start 1_upd_all_alt.sh ${NORMAL}" #print variable
 
-apt update
-apt dist-upgrade -d
-apt dist-upgrade
-apt clean
+sudo apt update
+sudo apt dist-upgrade -d -y
+sudo apt dist-upgrade -y
+sudo apt clean
 
 # sudo apt-get install eepm
 
@@ -18,4 +18,18 @@ apt clean
 
 # sudo epm play yandex-browser -y
 # sudo epm play yandex-disk -y
-sudo apt install apt-repo apt rpm vim-X11 node python gcc++ wget make gitk git git-gui mate-default zip unzip -y
+sudo apt install apt-repo 
+sudo apt install apt 
+sudo apt install rpm 
+sudo apt install vim-X11 
+sudo apt install node 
+sudo apt install python 
+sudo apt install gcc++ 
+sudo apt install wget 
+sudo apt install make 
+sudo apt install gitk 
+sudo apt install git 
+sudo apt install git-gui 
+sudo apt install mate-default 
+sudo apt install zip 
+sudo apt install unzip
