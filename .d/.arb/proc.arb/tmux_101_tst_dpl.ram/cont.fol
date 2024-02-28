@@ -7,15 +7,16 @@ else
     a1="${ARGS[3]}"
 fi
 
-a2="${ARGS[4]}"
+# a2="${ARGS[4]}"
 
-echo "\${a1}='${ARGS[3]}' is: ... "
-echo "\${a2}='${ARGS[4]}' is: ... "
+echo "\${a1}='${a1}' is: name session "
+# echo "\${a2}='${ARGS[4]}' is: ... "
 
 # ptr_path="${a1}"
-# ptr_path="$("${_abs_path}" "$(pwd)" "ptr_path")"
+# ptr_path="$("${_abs_path}" "${PPWD}" "ptr_path")"
 
 if isn_yes__ "DO? ::XXX::ENTER or ^C"; then return 0; fi
+
 
 tmux new -s "${a1}" -d
 tmux split-window -v -t "${a1}":0.0

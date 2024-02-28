@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [[ -z "${ARGS[3]}" ]]; then
+    plt_info "\${ARGS[3]} :: NOT_DEFINE :: return 1"
+    return 1
+fi
+
+# a2="${ARGS[4]}"
+
+echo "\${a1}='${ARGS[3]}' is: full path to .php "
+# echo "\${a2}='${ARGS[4]}' is: ... "
+
+# ptr_path="${a1}"
+# ptr_path="$("${_abs_path}" "${PPWD}" "ptr_path")"
+
+if isn_yes__ "DO? :: php -S localhost:8000 -t ${ARGS[3]} ::ENTER or ^C"; then return 0; fi
+
+
+tmux new -s 'php_800' -d
+tmux split-window -v -t "${a1}":0.0
+tmux send-keys -t "${a1}":0.0 'echo that 0 window;echo' Enter
+tm_a__
+# tmux split-window -h -t "${a1}":0.1
+# tmux send-keys -t "${a1}":0.1 'echo "that 1 window"' Enter
+# tmux send-keys -t "${a1}":0.2 'echo "that 2 window"' Enter
