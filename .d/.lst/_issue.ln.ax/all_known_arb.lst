@@ -5,7 +5,7 @@ ${REPO_PATH}/tgu/.d/.arb/tst.arb
 ${PLT_PATH}/.d/.arb/ush.arb
 ${PLT_PATH}/.d/.arb/bsh.arb
 ${PLT_PATH}/.d/.arb/osh.arb
-${PLT_PATH}/.d/.arb/proc.arb
+${PD_PATH}/.d/.arb/proc.arb
 ${PLT_PATH}/.d/.arb/tag.arb
 ${PLT_PATH}/.d/.arb/bug.arb
 

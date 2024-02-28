@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "\$1 - path to vm_disk_vdi"
+path_to_vm_disk_vdi="${ARGS[3]}"
+echo "--- VBoxManage showhdinfo $path_to_vm_disk_vdi ---"
+
+VBoxManage showhdinfo $path_to_vm_disk_vdi
