@@ -15,12 +15,13 @@ echo "\${a1}='${a1}' is: name session "
 # ptr_path="${a1}"
 # ptr_path="$("${_abs_path}" "${PPWD}" "ptr_path")"
 
-if isn_yes__ "DO? ::XXX::ENTER or ^C"; then return 0; fi
+# if isn_yes__ "DO? ::XXX::ENTER or ^C"; then return 0; fi
 
-
+tm_k__ "${a1}"
 tmux new -s "${a1}" -d
-tmux split-window -v -t "${a1}":0.0
-tmux send-keys -t "${a1}":0.0 'echo that 0 window;echo' Enter
+tmux split-window -h -t "${a1}":0.0
+tmux send-keys -t "${a1}":0.0 "echo that 0.0 window \$(pwd)=$(pwd)"
+tmux send-keys -t "${a1}":0.1 "links2 https://localhost:8000"
 tm_a__
 # tmux split-window -h -t "${a1}":0.1
 # tmux send-keys -t "${a1}":0.1 'echo "that 1 window"' Enter
