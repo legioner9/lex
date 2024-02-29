@@ -47,7 +47,7 @@ fntmp_654fe0b9ed() {
     #-------------------------------
 
     PPWW_654fe0b9ed="$(pwd)"
-    dot_repo_1234234="$(pwd)"/../.repo
+    dot_repo_1234234="${HOME}"/REPOBARE/_repo/lex/.d/.repo
 
     read -p "INFO dot dir repo \${dot_repo} = ${dot_repo_1234234}"
 
