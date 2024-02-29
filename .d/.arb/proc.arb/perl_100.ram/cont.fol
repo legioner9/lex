@@ -3,6 +3,8 @@
 #* EXA TRUE EXEC :
 #*
 
+return 0
+
 if [[ -z "${ARGS[3]}" ]]; then
     plt_info "\${ARGS[3]} :: NOT_DEFINE :: a1=default_3 "
     a1="default_3"

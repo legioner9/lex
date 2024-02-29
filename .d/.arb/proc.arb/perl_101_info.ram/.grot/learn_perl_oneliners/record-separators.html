@@ -1,0 +1,317 @@
+<!doctypehtml><html class="sidebar-visible no-js light"lang=en><head><meta charset=UTF-8><title>Record separators - Perl One-Liners Guide</title><meta content="text/html; charset=utf-8"http-equiv=Content-Type><meta content="Example based guide for text processing with Perl from the command line"name=description><meta content=width=device-width,initial-scale=1 name=viewport><meta content=#ffffff name=theme-color><meta content="Perl One-Liners Guide"property=og:title><meta content=website property=og:type><meta content="Example based guide for text processing with Perl from the command line"property=og:description><meta content=https://learnbyexample.github.io/learn_perl_oneliners/ property=og:url><meta content=https://raw.githubusercontent.com/learnbyexample/learn_perl_oneliners/main/images/perl_oneliners_ls.png property=og:image><meta content=1280 property=og:image:width><meta content=720 property=og:image:height><meta content=summary_large_image property=twitter:card><meta content=@learn_byexample property=twitter:site><link href="favicon.svg" rel=icon><link rel="shortcut icon"href="favicon.png"><link href="css/variables.css" rel=stylesheet><link href="css/general.css" rel=stylesheet><link href="css/chrome.css" rel=stylesheet><link href="FontAwesome/css/font-awesome.css" rel=stylesheet><link href="fonts/fonts.css" rel=stylesheet><link href="highlight.css" rel=stylesheet><link href="tomorrow-night.css" rel=stylesheet><link href="ayu-highlight.css" rel=stylesheet><link href="style.css" rel=stylesheet><body><script>var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";</script><script>try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }</script><script>var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');</script><script>var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);</script><nav aria-label="Table of contents"class=sidebar id=sidebar><div class=sidebar-scrollbox><ol class=chapter><li class="chapter-item expanded affix"><a href="cover.html">Cover</a><li class="chapter-item expanded affix"><a href="buy.html">Buy PDF/EPUB versions</a><li class="chapter-item expanded"><a href="preface.html"><strong aria-hidden=true>1.</strong> Preface</a><li class="chapter-item expanded"><a href="one-liner-introduction.html"><strong aria-hidden=true>2.</strong> One-liner introduction</a><li class="chapter-item expanded"><a href="line-processing.html"><strong aria-hidden=true>3.</strong> Line processing</a><li class="chapter-item expanded"><a href="in-place-file-editing.html"><strong aria-hidden=true>4.</strong> In-place file editing</a><li class="chapter-item expanded"><a href="field-separators.html"><strong aria-hidden=true>5.</strong> Field separators</a><li class="chapter-item expanded"><a class=active href="record-separators.html"><strong aria-hidden=true>6.</strong> Record separators</a><li class="chapter-item expanded"><a href="using-modules.html"><strong aria-hidden=true>7.</strong> Using modules</a><li class="chapter-item expanded"><a href="multiple-file-input.html"><strong aria-hidden=true>8.</strong> Multiple file input</a><li class="chapter-item expanded"><a href="processing-multiple-records.html"><strong aria-hidden=true>9.</strong> Processing multiple records</a><li class="chapter-item expanded"><a href="two-file-processing.html"><strong aria-hidden=true>10.</strong> Two file processing</a><li class="chapter-item expanded"><a href="dealing-with-duplicates.html"><strong aria-hidden=true>11.</strong> Dealing with duplicates</a><li class="chapter-item expanded"><a href="perl-rename-command.html"><strong aria-hidden=true>12.</strong> Perl rename command</a><li class="chapter-item expanded"><a href="Exercise_solutions.html"><strong aria-hidden=true>13.</strong> Exercise Solutions</a></li><br><hr><li class="chapter-item expanded"><i class="fa fa-github"id=git-repository-button></i><a href=https://github.com/learnbyexample/learn_perl_oneliners>   Source code</a><li class="chapter-item expanded"><i class="fa fa-home"id=home-button></i><a href="../index.html">   My Blog</a><li class="chapter-item expanded"><i class="fa fa-book"id=book-button></i><a href="../books.html">   My Books</a><li class="chapter-item expanded"><i class="fa fa-envelope"id=mail-button></i><a href=https://learnbyexample.gumroad.com/l/learnbyexample-weekly>   learnbyexample weekly</a><li class="chapter-item expanded"><i class="fa fa-twitter"id=twitter-button></i><a href=https://twitter.com/learn_byexample>   Twitter</a></ol></div><div class=sidebar-resize-handle id=sidebar-resize-handle></div></nav><div class=page-wrapper id=page-wrapper><div class=page><div id=menu-bar-hover-placeholder></div><div class="menu-bar sticky bordered"id=menu-bar><div class=left-buttons><button aria-label="Toggle Table of Contents"title="Toggle Table of Contents"aria-controls=sidebar class=icon-button id=sidebar-toggle type=button><i class="fa fa-bars"></i></button><button aria-label="Change theme"title="Change theme"aria-controls=theme-list aria-expanded=false aria-haspopup=true class=icon-button id=theme-toggle type=button><i class="fa fa-paint-brush"></i></button><ul aria-label=Themes class=theme-popup id=theme-list role=menu><li role=none><button class=theme id=light role=menuitem>Light (default)</button><li role=none><button class=theme id=rust role=menuitem>Rust</button><li role=none><button class=theme id=coal role=menuitem>Coal</button><li role=none><button class=theme id=navy role=menuitem>Navy</button><li role=none><button class=theme id=ayu role=menuitem>Ayu</button></ul><button aria-label="Toggle Searchbar"title="Search. (Shortkey: s)"aria-controls=searchbar aria-expanded=false aria-keyshortcuts=S class=icon-button id=search-toggle type=button><i class="fa fa-search"></i></button></div><h1 class=menu-title>Perl One-Liners Guide</h1><div class=right-buttons><a aria-label=Blog href="../index.html" title=Blog> <i class="fa fa-home"id=home-button></i> </a><a aria-label=Twitter href=https://twitter.com/learn_byexample title=Twitter> <i class="fa fa-twitter"id=twitter-button></i> </a><a aria-label="Git repository"title="Git repository"href=https://github.com/learnbyexample/learn_perl_oneliners> <i class="fa fa-github"id=git-repository-button></i> </a></div></div><div class=hidden id=search-wrapper><form class=searchbar-outer id=searchbar-outer><input placeholder="Search this book ..."aria-controls=searchresults-outer aria-describedby=searchresults-header id=searchbar name=searchbar type=search></form><div class="searchresults-outer hidden"id=searchresults-outer><div class=searchresults-header id=searchresults-header></div><ul id=searchresults></ul></div></div><script>document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });</script><div class=content id=content><main><div class=sidetoc><nav class=pagetoc></nav></div><h1 id=record-separators><a class=header href="record-separators.html#record-separators">Record separators</a></h1><p>So far, you've seen examples where Perl automatically splits input line by line based on the newline character. Just like you can control how those lines are further split into fields using the <code>-a</code>, <code>-F</code> options and other features, Perl provides a way to control what constitutes a line in the first place. The term <strong>record</strong> is used to describe the contents that gets placed in the <code>$_</code> special variable with the <code>-n</code> or <code>-p</code> options.<blockquote><p><img alt=info src="images/info.svg"> The <a href=https://github.com/learnbyexample/learn_perl_oneliners/tree/main/example_files>example_files</a> directory has all the files used in the examples.</blockquote><h2 id=input-record-separator><a class=header href="record-separators.html#input-record-separator">Input record separator</a></h2><p>By default, the newline character is used as the input record separator. You can change the <code>$/</code> special variable to specify a different input record separator. Unlike field separators, you can only use a string value, regexp isn't allowed. See <a href=https://perldoc.perl.org/perlfaq6#I-put-a-regular-expression-into-$/-but-it-didn't-work.-What's-wrong?>perldoc faq: I put a regular expression into <code>$/</code> but it didn't work. What's wrong?</a> for workarounds.<pre><code class=language-bash># change the input record separator to a comma character
+# note the content of the 2nd record where newline is just another character
+# by default, the record separator stays with the record contents
+$ printf 'this,is\na,sample,text' | perl -nE 'BEGIN{$/ = ","} say "$.)$_"'
+1)this,
+2)is
+a,
+3)sample,
+4)text
+
+# use the -l option to chomp the record separator
+$ printf 'this,is\na,sample,text' | perl -lne 'BEGIN{$/ = ","} print "$.)$_"'
+1)this
+2)is
+a
+3)sample
+4)text
+</code></pre><p>Here's an example where the record separator has multiple characters:<pre><code class=language-bash>$ cat report.log
+blah blah Error: second record starts
+something went wrong
+some more details Error: third record
+details about what went wrong
+
+# uses 'Error:' as the input record separator
+# print all the records containing 'something'
+$ perl -lne 'BEGIN{$/ = "Error:"} print if /something/' report.log
+ second record starts
+something went wrong
+some more details 
+</code></pre><h2 id=single-character-separator-with-the--0-option><a class=header href="record-separators.html#single-character-separator-with-the--0-option">Single character separator with the -0 option</a></h2><p>The <code>-0</code> command line option can be used to specify a single character record separator, represented with zero to three octal digits. You can also use hexadecimal value. Quoting from <a href=https://perldoc.perl.org/perlrun#-0%5Boctal/hexadecimal%5D>perldoc: -0 option</a>:<blockquote><p>You can also specify the separator character using hexadecimal notation: <code>-0xHHH...</code>, where the <code>H</code> are valid hexadecimal digits. Unlike the octal form, this one may be used to specify any Unicode character, even those beyond <code>0xFF</code>. So if you really want a record separator of <code>0777</code>, specify it as <code>-0x1FF</code>. (This means that you cannot use the <code>-x</code> option with a directory name that consists of hexadecimal digits, or else Perl will think you have specified a hex number to <code>-0</code>.)</blockquote><pre><code class=language-bash>$ s='this:is:a:sample:string'
+
+# the : character is represented by 072 in octal
+# -l is used here to chomp the separator
+$ echo "$s" | perl -0072 -lnE 'say "$.) $_"'
+1) this
+2) is
+3) a
+4) sample
+5) string
+
+# print all records containing 'a'
+$ echo "$s" | perl -0072 -lnE 'say $_ if /a/'
+a
+sample
+</code></pre><p>The character that gets appended to the <code>print</code> function with the <code>-l</code> option is based on the value of input record separator at that point. Here are some examples to clarify this point.<pre><code class=language-bash>$ s='this:is:a:sample:string'
+
+# here, the record separator is still the default \n when -l is used
+# so \n gets appended when 'print' is used
+# note that chomp isn't affected by such differences in order
+# same as: echo "$s" | perl -lne 'BEGIN{$/=":"} print if /a/'
+$ echo "$s" | perl -l -0072 -ne 'print if /a/'
+a
+sample
+
+# here -l is defined after -0, so : gets appended for 'print'
+$ echo "$s" | perl -0072 -lne 'print if /a/'
+a:sample:
+</code></pre><p>By default, the <code>-a</code> option will split the input record based on whitespaces and remove leading/trailing whitespaces. Now that you've seen how the input record separator can be something other than newline, here's an example to show the full effect of the default record splitting.<pre><code class=language-bash># ':' character is the input record separator here
+$ s='   a\t\tb:1000\n\n\t \n\n123 7777:x  y \n \n z  :apple banana cherry'
+$ printf '%b' "$s" | perl -0072 -lanE 'say join ",", @F'
+a,b
+1000,123,7777
+x,y,z
+apple,banana,cherry
+</code></pre><h2 id=nul-separator><a class=header href="record-separators.html#nul-separator">NUL separator</a></h2><p>If the <code>-0</code> option is used without an argument, the ASCII NUL character will be considered as the input record separator.<pre><code class=language-bash>$ printf 'apple\0banana\0' | cat -v
+apple^@banana^@
+
+# can also be golfed to: perl -lp0e ''
+# don't use -l0 as 0 will be treated as an argument to -l
+$ printf 'apple\0banana\0' | perl -ln0e 'print'
+apple
+banana
+</code></pre><h2 id=slurping-entire-input><a class=header href="record-separators.html#slurping-entire-input">Slurping entire input</a></h2><p>Any octal value of <code>400</code> and above will cause the entire input to be slurped as a single string. Idiomatically, <code>777</code> is used. This is same as setting <code>$/ = undef</code>. Slurping the entire file makes it easier to solve some problems, but be careful to not use it for large files, as that might cause memory issues.<pre><code class=language-bash>$ cat paths.txt
+/home/joe/report.log
+/home/ram/power.log
+/home/rambo/errors.log
+$ perl -0777 -pe 's|(?&LT!\A)/.+/|/|s' paths.txt
+/home/errors.log
+
+# replicate entire input as many times as needed
+$ seq 2 | perl -0777 -ne 'print $_ x 2'
+1
+2
+1
+2
+</code></pre><p>As an alternate, Perl 5.36 introduced the <code>-g</code> option for slurping the entire input.<pre><code class=language-bash>$ seq 2 | perl -gne 'print $_ x 2'
+1
+2
+1
+2
+</code></pre><h2 id=paragraph-mode><a class=header href="record-separators.html#paragraph-mode">Paragraph mode</a></h2><p>As a special case, using <code>-00</code> or setting <code>$/</code> to an empty string will invoke paragraph mode. Two or more consecutive newline characters will act as the record separator. Consider the below sample file:<pre><code class=language-bash>$ cat para.txt
+Hello World
+
+Hi there
+How are you
+
+Just do-it
+Believe it
+
+banana
+papaya
+mango
+
+Much ado about nothing
+He he he
+Adios amigo
+</code></pre><p>Here are some examples of processing the input file paragraph wise.<pre><code class=language-bash># all paragraphs containing 'do'
+# note that the record separator is preserved as there's no chomp
+$ perl -00 -ne 'print if /do/' para.txt
+Just do-it
+Believe it
+
+Much ado about nothing
+He he he
+Adios amigo
+
+# all paragraphs containing exactly two lines
+# note that there's an empty line after the last line
+$ perl -F'\n' -00 -ane 'print if $#F == 1' para.txt
+Hi there
+How are you
+
+Just do-it
+Believe it
+
+</code></pre><p>If the paragraphs are separated by more than two consecutive newlines, the extra newlines will not be part of the record content.<pre><code class=language-bash>$ s='a\n\n\n\n\n\n\n\n12\n34\n\nhi\nhello\n'
+
+# note that the -l option isn't being used here
+$ printf '%b' "$s" | perl -00 -ne 'print if $. <= 2'
+a
+
+12
+34
+
+</code></pre><p>Any leading newlines (only newlines, not other whitespace characters) in the input data file will be trimmed and not lead to empty records. This is similar to how <code>-a</code> treats whitespaces for default field separation.<pre><code class=language-bash>$ s='\n\n\na\nb\n\n12\n34\n\nhi\nhello\n\n\n\n'
+
+# note that -l is used to chomp the record separator here
+$ printf '%b' "$s" | perl -00 -lnE 'say "$_\n---" if $. == 1'
+a
+b
+---
+
+# max. of two trailing newlines will be preserved if -l isn't used
+$ printf '%b' "$s" | perl -00 -lnE 'say "$_\n---" if eof'
+hi
+hello
+---
+
+$ printf '%b' "$s" | perl -00 -nE 'END{say $.}'
+3
+$ printf '%b' "$s" | perl -00 -nE 'BEGIN{$/="\n\n"}; END{say $.}'
+5
+</code></pre><p>The empty line at the end is a common problem when dealing with custom record separators. You could either process the output further to remove it or add extra logic to handle the issue. Here's one possible workaround:<pre><code class=language-bash># single paragraph output, no empty line at the end
+$ perl -l -00 -ne 'if(/are/){print $s, $_; $s="\n"}' para.txt
+Hi there
+How are you
+
+# multiple paragraph output with an empty line between the paragraphs
+$ perl -l -00 -ne 'if(/are|an/){print $s, $_; $s="\n"}' para.txt
+Hi there
+How are you
+
+banana
+papaya
+mango
+</code></pre><h2 id=output-record-separator><a class=header href="record-separators.html#output-record-separator">Output record separator</a></h2><p>Similar to the <code>-0</code> option used for setting the input record separator, you can use the <code>-l</code> option to specify a single character output record separator by passing an octal value as the argument.<pre><code class=language-bash># comma as output record separator, won't have a newline at the end
+# note that -l also chomps the input record separator
+$ seq 8 | perl -l054 -ne 'print if /[24]/'
+2,4,
+
+# null separator
+$ seq 8 | perl -l0 -ne 'print if /[24]/' | cat -v
+2^@4^@
+
+# adding a final newline to output
+$ seq 8 | perl -l054 -nE 'print if /[24]/; END{say}'
+2,4,
+</code></pre><p>You can use the <code>$\</code> special variable to specify a multicharacter string that gets appended to the <code>print</code> function. This is will override changes due to the <code>-l</code> option, if any.<pre><code class=language-bash># recall that the input record separator isn't removed by default
+$ seq 2 | perl -ne 'print'
+1
+2
+# this will add four more characters after the already present newline
+# same as: perl -pe 'BEGIN{$\ = "---\n"}'
+$ seq 2 | perl -ne 'BEGIN{$\ = "---\n"} print'
+1
+---
+2
+---
+
+# change the NUL character to a dot and newline characters
+# -l here helps to chomp the NUL character 
+# -l also sets NUL to be added to print, but gets overridden in BEGIN block
+$ printf 'apple\0banana\0' | perl -0lpe 'BEGIN{$\ = ".\n"}'
+apple.
+banana.
+</code></pre><p>Many a times, you'd need to change the output record separator depending upon the contents of the input record or some other condition. The <code>cond ? expr1 : expr2</code> ternary operator is often used in such scenarios. The below example assumes that the input is evenly divisible, you'll have to add more logic if that is not the case.<pre><code class=language-bash># same as: perl -pe 's/\n/-/ if $. % 3'
+$ seq 6 | perl -lpe '$\ = $. % 3 ? "-" : "\n"'
+1-2-3
+4-5-6
+</code></pre><h2 id=summary><a class=header href="record-separators.html#summary">Summary</a></h2><p>This chapter showed you how to change the way the input content is split into records and how to set the string to be appended when <code>print</code> is used. The paragraph mode is useful for processing multiline records separated by one or more empty lines. You also learned how to set ASCII NUL as the record separator and how to slurp the entire input as a single string.<h2 id=exercises><a class=header href="record-separators.html#exercises">Exercises</a></h2><blockquote><p><img alt=info src="images/info.svg"> The <a href=https://github.com/learnbyexample/learn_perl_oneliners/tree/main/exercises>exercises</a> directory has all the files used in this section.</blockquote><p><strong>1)</strong> The input file <code>jumbled.txt</code> consists of words separated by various delimiters. Display all words that contain <code>an</code> or <code>at</code> or <code>in</code> or <code>it</code>, one per line.<pre><code class=language-bash>$ cat jumbled.txt
+overcoats;furrowing-typeface%pewter##hobby
+wavering:concession/woof\retailer
+joint[]seer{intuition}titanic
+
+##### add your solution here
+overcoats
+furrowing
+wavering
+joint
+intuition
+titanic
+</code></pre><p><strong>2)</strong> Emulate <code>paste -sd,</code> with Perl.<pre><code class=language-bash># this command joins all input lines with the ',' character
+$ paste -sd, ip.txt
+Hello World,How are you,This game is good,Today is sunny,12345,You are funny
+# make sure there's no ',' at the end of the line
+# and that there's a newline character at the end of the line
+##### add your solution here
+Hello World,How are you,This game is good,Today is sunny,12345,You are funny
+
+# if there's only one line in input, again make sure there's no trailing ','
+# and that there's a newline character at the end of the line
+$ printf 'fig' | paste -sd,
+fig
+$ printf 'fig' | ##### add your solution here
+fig
+</code></pre><p><strong>3)</strong> For the input file <code>sample.txt</code>, extract all paragraphs having words starting with <code>do</code>.<pre><code class=language-bash>$ cat sample.txt
+Hello World
+
+Good day
+How are you
+
+Just do-it
+Believe it
+
+Today is sunny
+Not a bit funny
+No doubt you like it too
+
+Much ado about nothing
+He he he
+
+# note that there's no extra empty line at the end of the output
+##### add your solution here
+Just do-it
+Believe it
+
+Today is sunny
+Not a bit funny
+No doubt you like it too
+</code></pre><p><strong>4)</strong> For the input file <code>sample.txt</code>, change each paragraph to a single line by joining lines using <code>.</code> and a space character as the separator. Also, add a final <code>.</code> to each paragraph.<pre><code class=language-bash># note that there's no extra empty line at the end of the output
+##### add your solution here
+Hello World.
+
+Good day. How are you.
+
+Just do-it. Believe it.
+
+Today is sunny. Not a bit funny. No doubt you like it too.
+
+Much ado about nothing. He he he.
+</code></pre><p><strong>5)</strong> For the given input, use <code>;;</code> as the record separators and <code>:</code> as the field separators. Filter records whose second field is greater than <code>50</code>.<pre><code class=language-bash>$ s='mango:100;;apple:25;;grapes:75'
+
+# note that the output has ;; at the end, not a newline character
+$ printf "$s" | ##### add your solution here
+mango:100;;grapes:75;; 
+</code></pre><p><strong>6)</strong> The input file <code>f1.txt</code> has varying amount of empty lines between the records, change them to be always two empty lines. Also, remove the empty lines at the start and end of the file.<pre><code class=language-bash>##### add your solution here
+hello
+
+
+world
+
+
+apple
+banana
+cherry
+
+
+tea coffee
+chocolate
+</code></pre><p><strong>7)</strong> The sample string shown below uses <code>cat</code> as the record separator. Display only the even numbered records separated by a single empty line.<pre><code class=language-bash>$ s='applecatfigcat12345catbananacatguava:cat:mangocat3'
+$ echo "$s" | ##### add your solution here
+fig
+
+banana
+
+:mango
+</code></pre></main><nav aria-label="Page navigation"class=nav-wrapper><a aria-label="Previous chapter"class="mobile-nav-chapters previous"title="Previous chapter"aria-keyshortcuts=Left href="field-separators.html" rel=prev> <i class="fa fa-angle-left"></i> </a><a aria-label="Next chapter"class="mobile-nav-chapters next"title="Next chapter"aria-keyshortcuts=Right href="using-modules.html" rel=next> <i class="fa fa-angle-right"></i> </a><div style="clear: both"></div></nav></div></div><nav aria-label="Page navigation"class=nav-wide-wrapper><a aria-label="Previous chapter"class="nav-chapters previous"title="Previous chapter"aria-keyshortcuts=Left href="field-separators.html" rel=prev> <i class="fa fa-angle-left"></i> </a><a aria-label="Next chapter"class="nav-chapters next"title="Next chapter"aria-keyshortcuts=Right href="using-modules.html" rel=next> <i class="fa fa-angle-right"></i> </a></nav></div><script>window.playground_copyable = true;</script><script charset=utf-8 src="elasticlunr.min.js"></script><script charset=utf-8 src="mark.min.js"></script><script charset=utf-8 src="searcher.js"></script><script charset=utf-8 src="clipboard.min.js"></script><script charset=utf-8 src="highlight.js"></script><script charset=utf-8 src="book.js"></script><script src="sidebar.js"></script>

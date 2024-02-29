@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#* EXA TRUE EXEC :
+#* arb2mm_ 1 3 4 "docker images" 0
+
+if ! is_num "${ARGS[4]}"; then
+    plt_exit "in ${FNN} :\${ARGS[4]}: NOT_NUMBER : return 1"
+    return 1
+fi
+
+# exec_string=${ARGS[3]} num_column=${ARGS[4]}
+
+local a1=${ARGS[3]}
+local a2=${ARGS[4]}
+
+echo "\${a1}='${ARGS[3]}' is: exec_string "
+echo "\${a2}='${ARGS[4]}' is: num_column "
+
+# ptr_path="${a1}"
+# ptr_path="$("${_abs_path}" "$(pwd)" "ptr_path")"
+
+# docker images  | perl -lane 'print $F[0]'
+
+if isn_yes__ "DO? ::eval ${a1} | eval perl -lane \'print \$F[${a2}]\'::ENTER or ^C"; then return 0; fi
+
+eval "${a1}" | eval perl -lane \'print \$F\["${a2}"\]\'

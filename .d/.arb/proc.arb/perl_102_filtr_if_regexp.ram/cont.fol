@@ -1,0 +1,35 @@
+#!/bin/bash
+
+#* EXA TRUE EXEC :
+#* arb2mm_ 1 3 2 "printf 'gate\napple\nwhat\nkite\n'" "/at/"
+
+# print lines containing 'at'
+# same as: grep 'at' and sed -n '/at/p' and awk '/at/'
+# $ printf 'gate\napple\nwhat\nkite\n' | perl -ne 'print if /at/'
+# gate
+# what
+
+# print lines NOT containing 'e'
+# same as: grep -v 'e' and sed -n '/e/!p' and awk '!/e/'
+# $ printf 'gate\napple\nwhat\nkite\n' | perl -ne 'print if !/e/'
+# what
+
+if [[ -z "${ARGS[4]}" ]]; then
+    plt_info "\${ARGS[4]} :: NOT_DEFINE :: return 1 "
+    return 1
+fi
+
+local a1=${ARGS[3]}
+local a2=${ARGS[4]}
+
+
+
+echo "\${a1}='${ARGS[3]}' is: exec_string "
+echo "\${a2}='${ARGS[4]}' is: regexp (/.../g) "
+
+# ptr_path="${a1}"
+# ptr_path="$("${_abs_path}" "$(pwd)" "ptr_path")"
+
+if isn_yes__ "DO? :: $a1 | perl -ne 'print if ${a2}'::ENTER or ^C"; then return 0; fi
+
+eval "${a1}" | eval perl -ne \'print if ${a2}\'

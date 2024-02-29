@@ -1,0 +1,152 @@
+<!doctypehtml><html class="sidebar-visible no-js light"lang=en><head><meta charset=UTF-8><title>Multiple file input - Perl One-Liners Guide</title><meta content="text/html; charset=utf-8"http-equiv=Content-Type><meta content="Example based guide for text processing with Perl from the command line"name=description><meta content=width=device-width,initial-scale=1 name=viewport><meta content=#ffffff name=theme-color><meta content="Perl One-Liners Guide"property=og:title><meta content=website property=og:type><meta content="Example based guide for text processing with Perl from the command line"property=og:description><meta content=https://learnbyexample.github.io/learn_perl_oneliners/ property=og:url><meta content=https://raw.githubusercontent.com/learnbyexample/learn_perl_oneliners/main/images/perl_oneliners_ls.png property=og:image><meta content=1280 property=og:image:width><meta content=720 property=og:image:height><meta content=summary_large_image property=twitter:card><meta content=@learn_byexample property=twitter:site><link href="favicon.svg" rel=icon><link rel="shortcut icon"href="favicon.png"><link href="css/variables.css" rel=stylesheet><link href="css/general.css" rel=stylesheet><link href="css/chrome.css" rel=stylesheet><link href="FontAwesome/css/font-awesome.css" rel=stylesheet><link href="fonts/fonts.css" rel=stylesheet><link href="highlight.css" rel=stylesheet><link href="tomorrow-night.css" rel=stylesheet><link href="ayu-highlight.css" rel=stylesheet><link href="style.css" rel=stylesheet><body><script>var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";</script><script>try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }</script><script>var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');</script><script>var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);</script><nav aria-label="Table of contents"class=sidebar id=sidebar><div class=sidebar-scrollbox><ol class=chapter><li class="chapter-item expanded affix"><a href="cover.html">Cover</a><li class="chapter-item expanded affix"><a href="buy.html">Buy PDF/EPUB versions</a><li class="chapter-item expanded"><a href="preface.html"><strong aria-hidden=true>1.</strong> Preface</a><li class="chapter-item expanded"><a href="one-liner-introduction.html"><strong aria-hidden=true>2.</strong> One-liner introduction</a><li class="chapter-item expanded"><a href="line-processing.html"><strong aria-hidden=true>3.</strong> Line processing</a><li class="chapter-item expanded"><a href="in-place-file-editing.html"><strong aria-hidden=true>4.</strong> In-place file editing</a><li class="chapter-item expanded"><a href="field-separators.html"><strong aria-hidden=true>5.</strong> Field separators</a><li class="chapter-item expanded"><a href="record-separators.html"><strong aria-hidden=true>6.</strong> Record separators</a><li class="chapter-item expanded"><a href="using-modules.html"><strong aria-hidden=true>7.</strong> Using modules</a><li class="chapter-item expanded"><a class=active href="multiple-file-input.html"><strong aria-hidden=true>8.</strong> Multiple file input</a><li class="chapter-item expanded"><a href="processing-multiple-records.html"><strong aria-hidden=true>9.</strong> Processing multiple records</a><li class="chapter-item expanded"><a href="two-file-processing.html"><strong aria-hidden=true>10.</strong> Two file processing</a><li class="chapter-item expanded"><a href="dealing-with-duplicates.html"><strong aria-hidden=true>11.</strong> Dealing with duplicates</a><li class="chapter-item expanded"><a href="perl-rename-command.html"><strong aria-hidden=true>12.</strong> Perl rename command</a><li class="chapter-item expanded"><a href="Exercise_solutions.html"><strong aria-hidden=true>13.</strong> Exercise Solutions</a></li><br><hr><li class="chapter-item expanded"><i class="fa fa-github"id=git-repository-button></i><a href=https://github.com/learnbyexample/learn_perl_oneliners>   Source code</a><li class="chapter-item expanded"><i class="fa fa-home"id=home-button></i><a href="../index.html">   My Blog</a><li class="chapter-item expanded"><i class="fa fa-book"id=book-button></i><a href="../books.html">   My Books</a><li class="chapter-item expanded"><i class="fa fa-envelope"id=mail-button></i><a href=https://learnbyexample.gumroad.com/l/learnbyexample-weekly>   learnbyexample weekly</a><li class="chapter-item expanded"><i class="fa fa-twitter"id=twitter-button></i><a href=https://twitter.com/learn_byexample>   Twitter</a></ol></div><div class=sidebar-resize-handle id=sidebar-resize-handle></div></nav><div class=page-wrapper id=page-wrapper><div class=page><div id=menu-bar-hover-placeholder></div><div class="menu-bar sticky bordered"id=menu-bar><div class=left-buttons><button aria-label="Toggle Table of Contents"title="Toggle Table of Contents"aria-controls=sidebar class=icon-button id=sidebar-toggle type=button><i class="fa fa-bars"></i></button><button aria-label="Change theme"title="Change theme"aria-controls=theme-list aria-expanded=false aria-haspopup=true class=icon-button id=theme-toggle type=button><i class="fa fa-paint-brush"></i></button><ul aria-label=Themes class=theme-popup id=theme-list role=menu><li role=none><button class=theme id=light role=menuitem>Light (default)</button><li role=none><button class=theme id=rust role=menuitem>Rust</button><li role=none><button class=theme id=coal role=menuitem>Coal</button><li role=none><button class=theme id=navy role=menuitem>Navy</button><li role=none><button class=theme id=ayu role=menuitem>Ayu</button></ul><button aria-label="Toggle Searchbar"title="Search. (Shortkey: s)"aria-controls=searchbar aria-expanded=false aria-keyshortcuts=S class=icon-button id=search-toggle type=button><i class="fa fa-search"></i></button></div><h1 class=menu-title>Perl One-Liners Guide</h1><div class=right-buttons><a aria-label=Blog href="../index.html" title=Blog> <i class="fa fa-home"id=home-button></i> </a><a aria-label=Twitter href=https://twitter.com/learn_byexample title=Twitter> <i class="fa fa-twitter"id=twitter-button></i> </a><a aria-label="Git repository"title="Git repository"href=https://github.com/learnbyexample/learn_perl_oneliners> <i class="fa fa-github"id=git-repository-button></i> </a></div></div><div class=hidden id=search-wrapper><form class=searchbar-outer id=searchbar-outer><input placeholder="Search this book ..."aria-controls=searchresults-outer aria-describedby=searchresults-header id=searchbar name=searchbar type=search></form><div class="searchresults-outer hidden"id=searchresults-outer><div class=searchresults-header id=searchresults-header></div><ul id=searchresults></ul></div></div><script>document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });</script><div class=content id=content><main><div class=sidetoc><nav class=pagetoc></nav></div><h1 id=multiple-file-input><a class=header href="multiple-file-input.html#multiple-file-input">Multiple file input</a></h1><p>You have already seen blocks like <code>BEGIN</code>, <code>END</code> and statements like <code>next</code> and <code>exit</code>. This chapter will discuss features that are useful to make decisions around each file when there are multiple files passed as input.<blockquote><p><img alt=info src="images/info.svg"> The <a href=https://github.com/learnbyexample/learn_perl_oneliners/tree/main/example_files>example_files</a> directory has all the files used in the examples.</blockquote><h2 id=argv-argv-and-argv><a class=header href="multiple-file-input.html#argv-argv-and-argv">@ARGV, $ARGV and ARGV</a></h2><p>From <a href=https://perldoc.perl.org/variables/@ARGV>perldoc: @ARGV</a>:<blockquote><p>The array <code>@ARGV</code> contains the command-line arguments intended for the script. <code>$#ARGV</code> is generally the number of arguments minus one, because <code>$ARGV[0]</code> is the first argument, not the program's command name itself.</blockquote><pre><code class=language-bash># note that only the -E option is used here
+$ perl -E 'say join "\n", @ARGV' f[1-3].txt greeting.txt
+f1.txt
+f2.txt
+f3.txt
+greeting.txt
+
+# @ARGV continuously ejects the filename being processed
+# f1.txt and f2.txt have 1 line each, table.txt has 3 lines
+$ perl -nE 'say "$#ARGV: " . join ",", @ARGV' f[12].txt table.txt
+1: f2.txt,table.txt
+0: table.txt
+-1: 
+-1: 
+-1: 
+</code></pre><blockquote><p><img alt=info src="images/info.svg"> See also <a href=https://stackoverflow.com/q/9151243/4082052>stackoverflow: referencing filename passed as arguments</a> for more details about <code>@ARGV</code> behavior when the <code>-n</code> or <code>-p</code> switches are active.</blockquote><p>From <a href=https://perldoc.perl.org/variables/$ARGV>perldoc: $ARGV</a>:<blockquote><p>Contains the name of the current file when reading from <code><></code>.</blockquote><p>From <a href=https://perldoc.perl.org/variables/ARGV>perldoc: ARGV</a>:<blockquote><p>The special filehandle that iterates over command-line filenames in <code>@ARGV</code>. Usually written as the null filehandle in the angle operator <code><></code>. Note that currently <code>ARGV</code> only has its magical effect within the <code><></code> operator; elsewhere it is just a plain filehandle corresponding to the last file opened by <code><></code>.</blockquote><p>By closing <code>ARGV</code> at the end of each input file, you can reset the <code>$.</code> variable.<pre><code class=language-bash># logic to do something at the start of each input file
+# closing ARGV will reset $.
+$ perl -ne 'print "--- $ARGV ---\n" if $. == 1;
+            print;
+            close ARGV if eof' greeting.txt table.txt
+--- greeting.txt ---
+Hi there
+Have a nice day
+Good bye
+--- table.txt ---
+brown bread mat hair 42
+blue cake mug shirt -7
+yellow banana window shoes 3.14
+
+# do something at the end of a file
+# same as: tail -q -n1 greeting.txt table.txt
+$ perl -ne 'print if eof' greeting.txt table.txt
+Good bye
+yellow banana window shoes 3.14
+</code></pre><p>Here are some more examples.<pre><code class=language-bash># same as: awk 'FNR==2{print; nextfile}' greeting.txt table.txt
+$ perl -ne 'print and close ARGV if $.==2' greeting.txt table.txt
+Have a nice day
+blue cake mug shirt -7
+
+# same as: head -q -n1 and awk 'FNR>1{nextfile} 1'
+# can also use: perl -pe 'close ARGV'
+$ perl -pe 'close ARGV if $.>=1' greeting.txt table.txt
+Hi there
+brown bread mat hair 42
+</code></pre><p>In scalar context, <code><></code> will return the next input record and in list context, <code><></code> returns all the remaining input records. If you need a single character instead of a record, you can use the <code>getc</code> function. See <a href=https://perldoc.perl.org/perlfunc#getc>perldoc: getc</a> for documentation.<pre><code class=language-bash># note that only the -e option is used, same as: perl -e 'print scalar <>'
+$ perl -e 'print scalar readline' greeting.txt
+Hi there
+$ perl -e '$line = <>; print "$line---\n"; print <>' greeting.txt
+Hi there
+---
+Have a nice day
+Good bye
+
+# note that the default filehandle for getc is STDIN
+$ perl -E 'say getc' &LTgreeting.txt
+H
+</code></pre><h2 id=stdin><a class=header href="multiple-file-input.html#stdin">STDIN</a></h2><p>The <code>STDIN</code> filehandle is useful to distinguish between files passed as arguments and the stdin data. See the <a href="two-file-processing.html#comparing-records">Comparing records</a> section for more examples.<pre><code class=language-bash># with no file arguments, <> reads the stdin data
+$ printf 'apple\nmango\n' | perl -e 'print <>'
+apple
+mango
+
+# with file arguments, <> doesn't read the stdin data
+$ printf 'apple\nmango\n' | perl -e 'print <>' greeting.txt
+Hi there
+Have a nice day
+Good bye
+
+$ printf 'apple\nmango\n' | perl -e 'print &LTSTDIN>' greeting.txt
+apple
+mango
+</code></pre><h2 id=skipping-remaining-contents-per-file><a class=header href="multiple-file-input.html#skipping-remaining-contents-per-file">Skipping remaining contents per file</a></h2><p>You have seen examples where the <code>exit</code> function was used to avoid processing unnecessary records for the current and any other files yet to be processed. Sometimes, you need to skip only the contents for the current file and move on to the next file for processing. The <code>close ARGV</code> example seen previously comes in handy for such cases.<pre><code class=language-bash># avoids unnecessary processing compared to perl -ne 'print if !(/\bba/ .. eof)'
+# same as: awk '/\&LTba/{nextfile} 1' ip.txt table.txt
+$ perl -ne '/\bba/ ? close ARGV : print' ip.txt table.txt
+it is a warm and cozy day
+listen to what I say
+go play in the park
+brown bread mat hair 42
+blue cake mug shirt -7
+
+# print filename if it contains 'I' anywhere in the file
+# same as: grep -l 'I' f[1-3].txt greeting.txt
+# same as: perl -0777 -nE 'say $ARGV if /I/'
+# but slurping is dependent on size of input files and available memory
+$ perl -nE 'if(/I/){say $ARGV; close ARGV}' f[1-3].txt greeting.txt
+f1.txt
+f2.txt
+
+# print filename if it contains a word ending with 'e'
+# and 'bat' or 'mat' (irrespective of case) anywhere in the file
+# same as: perl -0777 -nE 'say $ARGV if /(?=.*?e\b)(?i).*[bm]at/s'
+$ perl -nE '$m1=1 if /e\b/; $m2=1 if /[bm]at/i;
+            if($m1 && $m2){say $ARGV; $m1=$m2=0; close ARGV; next};
+            $m1=$m2=0 if eof' f[1-3].txt greeting.txt
+f3.txt
+</code></pre><h2 id=summary><a class=header href="multiple-file-input.html#summary">Summary</a></h2><p>This chapter introduced features for processing multiple file inputs and constructing file level decisions. These will also show up in more examples in the coming chapters.<h2 id=exercises><a class=header href="multiple-file-input.html#exercises">Exercises</a></h2><blockquote><p><img alt=info src="images/info.svg"> The <a href=https://github.com/learnbyexample/learn_perl_oneliners/tree/main/exercises>exercises</a> directory has all the files used in this section.</blockquote><p><strong>1)</strong> Print the last field of first two lines for the input files <code>table.txt</code> and <code>ip.txt</code>. Assume space as the field separators for these two files. To make the output more informative, print filenames and a separator as shown in the output below. Assume that the input files will have at least two lines.<pre><code class=language-bash># assume table.txt ip.txt are passed as file inputs
+##### add your solution here
+>table.txt<
+42
+-7
+----------
+>ip.txt<
+World
+you
+----------
+</code></pre><p><strong>2)</strong> For the input files <code>sample.txt</code>, <code>secrets.txt</code>, <code>ip.txt</code> and <code>table.txt</code>, display only the names of files that contain <code>at</code> or <code>fun</code> in the third field. Assume space as the field separator.<pre><code class=language-bash>##### add your solution here
+secrets.txt
+ip.txt
+table.txt
+</code></pre><p><strong>3)</strong> Print the first two lines for each of the input files <code>ip.txt</code>, <code>sample.txt</code> and <code>table.txt</code>. Also, add a separator between the results as shown below (note that the separator isn't present at the end of the output). Assume that the input files will have at least two lines.<pre><code class=language-bash>##### add your solution here
+Hello World
+How are you
+---
+Hello World
+
+---
+brown bread mat hair 42
+blue cake mug shirt -7
+</code></pre><p><strong>4)</strong> Print only the second field of the third line, if any, from these input files: <code>ip.txt</code>, <code>sample.txt</code> and <code>copyright.txt</code>. Consider space as the field separator.<pre><code class=language-bash>##### add your solution here
+game
+day
+bla
+</code></pre></main><nav aria-label="Page navigation"class=nav-wrapper><a aria-label="Previous chapter"class="mobile-nav-chapters previous"title="Previous chapter"aria-keyshortcuts=Left href="using-modules.html" rel=prev> <i class="fa fa-angle-left"></i> </a><a aria-label="Next chapter"class="mobile-nav-chapters next"title="Next chapter"aria-keyshortcuts=Right href="processing-multiple-records.html" rel=next> <i class="fa fa-angle-right"></i> </a><div style="clear: both"></div></nav></div></div><nav aria-label="Page navigation"class=nav-wide-wrapper><a aria-label="Previous chapter"class="nav-chapters previous"title="Previous chapter"aria-keyshortcuts=Left href="using-modules.html" rel=prev> <i class="fa fa-angle-left"></i> </a><a aria-label="Next chapter"class="nav-chapters next"title="Next chapter"aria-keyshortcuts=Right href="processing-multiple-records.html" rel=next> <i class="fa fa-angle-right"></i> </a></nav></div><script>window.playground_copyable = true;</script><script charset=utf-8 src="elasticlunr.min.js"></script><script charset=utf-8 src="mark.min.js"></script><script charset=utf-8 src="searcher.js"></script><script charset=utf-8 src="clipboard.min.js"></script><script charset=utf-8 src="highlight.js"></script><script charset=utf-8 src="book.js"></script><script src="sidebar.js"></script>
