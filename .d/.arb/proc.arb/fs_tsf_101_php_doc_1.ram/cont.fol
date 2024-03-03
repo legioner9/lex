@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#* EXA TRUE TST EXEC : arb2mm_ 1 4 2 ${REPO_PATH}/lex/.d/.arb/proc.arb/fs_tsf_101_php_doc_1.ram/.grot/dir_php_docs_html ${REPO_PATH}/lex/.d/.arb/proc.arb/fs_tsf_101_php_doc_1.ram/.grot/arb_php_docs
+#* EXA TRUE PROD EXEC : arb2mm_ 1 4 2 ${REPO_PATH}/NPhp/.d/.ref.ax/www.php.net/manual/ru ${REPO_PATH}/NPhp/.d/.arb/php_doc.arb
+
+if [[ -z "${ARGS[4]}" ]]; then
+    plt_exit "in ${FNN} : '\${ARGS[3]}' is: dir_php_docs_html '\${ARGS[4]}' is: arb_php_docs :: NOT_DEFINE : '\${ARGS[4]}' : return 1"
+    return 1
+fi
+
+if ! [[ -d "${ARGS[3]}" ]]; then
+    plt_exit "in ${FNN} : NOT_DIR : '${ARGS[3]}' : return 1"
+    return 1
+else
+   local a1="${ARGS[3]}"
+fi
+
+if ! [[ -d "${ARGS[4]}" ]]; then
+    plt_exit "in ${FNN} : NOT_DIR : '${ARGS[4]}' : return 1"
+    return 1
+else
+   local a2="${ARGS[4]}"
+fi
+
+echo "\${a1}='${ARGS[3]}' is: dir_php_docs_html "
+echo "\${a2}='${ARGS[4]}' is: arb_php_docs "
+
+# ptr_path="${a1}"
+# ptr_path="$("${_abs_path}" "$(pwd)" "ptr_path")"
+
+if isn_yes__ "DO? :: php_doc_1 ::ENTER or ^C"; then return 0; fi

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#* EXA TRUE EXEC :
+#*
+
+if [[ -z "${ARGS[3]}" ]]; then
+    plt_info "\${ARGS[3]} :: NOT_DEFINE :: a1=default_3 "
+    a1="default_3"
+else
+    a1="${ARGS[3]}"
+fi
+
+# local a1=${ARGS[3]}
+local a2=${ARGS[4]}
+
+echo "\${a1}='${ARGS[3]}' is: ... "
+echo "\${a2}='${ARGS[4]}' is: ... "
+
+# ptr_path="${a1}"
+# ptr_path="$("${_abs_path}" "$(pwd)" "ptr_path")"
+
+if isn_yes__ "DO? ::XXX::ENTER or ^C"; then return 0; fi

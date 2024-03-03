@@ -29,6 +29,7 @@ ${REPO_PATH}/NBash/.arb/util
 
 ${REPO_PATH}/NPhp/.d/.arb/man.arb
 ${REPO_PATH}/NPhp/.d/.arb/doc.arb
+${REPO_PATH}/NPhp/.d/.arb/php_doc.arb
 
 ${REPO_PATH}/Opus/.d/.arb/syll.arb
 ${REPO_PATH}/Opus/.d/.arb/html.arb
