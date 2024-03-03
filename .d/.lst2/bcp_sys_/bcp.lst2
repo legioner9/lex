@@ -8,6 +8,7 @@ ${HOME}/.gitconfig@gitconfig
 ${HOME}/.vimrc@vimrc
 ${HOME}/.digrc@digrc
 ${HOME}/.mailrc@mailrc
+${HOME}/.wgetrc@wgetrc
 
 ${HOME}/.clang-format@clang-format
 ${HOME}/.links@links
@@ -19,5 +20,7 @@ ${HOME}/.plt_path@plt_path
 ${HOME}/.pd_path@pd_path
 ${HOME}/.pd_read@pd_read
 
+${HOME}/.config/Code/User/snippets@snp_code
+${HOME}/.config/VSCodium/User/snippets@snp_codium
 
 #${HOME}/.rbenv@rbenv 

@@ -23,6 +23,7 @@ ${REPO_PATH}/Nodus/.d/.arb/nodus.comm.mitt.arb
 ${REPO_PATH}/NRuby/.arb/man
 ${REPO_PATH}/NRuby/.arb/gem
 
+${REPO_PATH}/NBash/.arb/man_1
 ${REPO_PATH}/NBash/.arb/man
 ${REPO_PATH}/NBash/.arb/util
 
@@ -35,3 +36,8 @@ ${REPO_PATH}/Opus/.d/.arb/heap.arb
 ${REPO_PATH}/NMall/.d/.arb/mall.arb
 
 ${REPO_PATH}/NPerl/.d/.arb/man.arb
+
+${REPO_PATH}/NDocker/.d/.arb/api.arb
+${REPO_PATH}/NDocker/.d/.arb/cli.arb
+${REPO_PATH}/NDocker/.d/.arb/cpf.arb
+${REPO_PATH}/NDocker/.d/.arb/dkf.arb
