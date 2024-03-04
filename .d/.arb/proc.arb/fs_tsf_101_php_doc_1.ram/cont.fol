@@ -35,6 +35,7 @@ for path_html in $(d2e_ -n -ff ${a1}); do
 
     name_dir_arb=$(prs_f -n "${path_html}").ram
     path_file_html=${a1}/$(prs_f -n "${path_html}").php.html
+    name_file_html=$(prs_f -n "${path_html}").php.html
 
     echo -e "${GREEN}\$name_dir_arb = $name_dir_arb${NORMAL}" #print variable
 
@@ -45,6 +46,9 @@ for path_html in $(d2e_ -n -ff ${a1}); do
     echo -e "${HLIGHT}--- cp ${path_file_html} ${a2}/$name_dir_arb/.grot/.html ---${NORMAL}" #start files
     cp ${path_file_html} ${a2}/$name_dir_arb/.grot/.html
 
-    html2
-
+    echo -e "${HLIGHT}--- html2pdf__ ${a2}/$name_dir_arb/.grot/.html/${name_file_html} ${a2}/$name_dir_arb/.grot/.pdf ---${NORMAL}" #start files
+    # read -p "DO?"
+    html2pdf__ ${a2}/$name_dir_arb/.grot/.html/${name_file_html} ${a2}/$name_dir_arb/.grot/.pdf
+    
 done
+return 0
