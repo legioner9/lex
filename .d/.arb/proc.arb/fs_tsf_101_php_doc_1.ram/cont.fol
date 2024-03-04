@@ -31,7 +31,7 @@ echo "\${a2}='${ARGS[4]}' is: arb_php_docs "
 # if isn_yes__ "DO? :: php_doc_1 ::ENTER or ^C"; then return 0; fi
 
 local path_html=
-for path_html in $(d2e_ -n -ff ${a1}); do
+for path_html in $(d2e_ -n -ff ${a1}); do 
 
     name_dir_arb=$(prs_f -n "${path_html}").ram
     path_file_html=${a1}/$(prs_f -n "${path_html}").php.html
