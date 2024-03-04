@@ -12,14 +12,14 @@ if ! [[ -d "${ARGS[3]}" ]]; then
     plt_exit "in ${FNN} : NOT_DIR : '${ARGS[3]}' : return 1"
     return 1
 else
-   local a1="${ARGS[3]}"
+    local a1="${ARGS[3]}"
 fi
 
 if ! [[ -d "${ARGS[4]}" ]]; then
     plt_exit "in ${FNN} : NOT_DIR : '${ARGS[4]}' : return 1"
     return 1
 else
-   local a2="${ARGS[4]}"
+    local a2="${ARGS[4]}"
 fi
 
 echo "\${a1}='${ARGS[3]}' is: dir_php_docs_html "
@@ -28,4 +28,23 @@ echo "\${a2}='${ARGS[4]}' is: arb_php_docs "
 # ptr_path="${a1}"
 # ptr_path="$("${_abs_path}" "$(pwd)" "ptr_path")"
 
-if isn_yes__ "DO? :: php_doc_1 ::ENTER or ^C"; then return 0; fi
+# if isn_yes__ "DO? :: php_doc_1 ::ENTER or ^C"; then return 0; fi
+
+local path_html=
+for path_html in $(d2e_ -n -ff ${a1}); do
+
+    name_dir_arb=$(prs_f -n "${path_html}").ram
+    path_file_html=${a1}/$(prs_f -n "${path_html}").php.html
+
+    echo -e "${GREEN}\$name_dir_arb = $name_dir_arb${NORMAL}" #print variable
+
+    echo -e "${HLIGHT}--- mkdir ${a2}/${name_dir_arb} ---${NORMAL}" #start files
+    mkdir ${a2}/"${name_dir_arb}"
+    echo -e "${HLIGHT}--- cp -r ${a2}/_.ram/. ${a2}/$name_dir_arb ---${NORMAL}" #start files
+    cp -r ${a2}/_.ram/. ${a2}/$name_dir_arb
+    echo -e "${HLIGHT}--- cp ${path_file_html} ${a2}/$name_dir_arb/.grot/.html ---${NORMAL}" #start files
+    cp ${path_file_html} ${a2}/$name_dir_arb/.grot/.html
+
+    html2
+
+done

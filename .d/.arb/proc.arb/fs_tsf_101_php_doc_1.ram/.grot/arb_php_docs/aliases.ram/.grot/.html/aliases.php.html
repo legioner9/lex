@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PHP: Список псевдонимов функций - Manual </title>
+
+ <link rel="icon" type="image/svg+xml" sizes="any" href="../../favicon.svg%3Fv=2">
+ <link rel="icon" type="image/png" sizes="196x196" href="../../favicon-196x196.png%3Fv=2">
+ <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png%3Fv=2">
+ <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png%3Fv=2">
+ <link rel="shortcut icon" href="../../favicon.ico%3Fv=2">
+
+ <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
+ <link rel="alternate" type="application/atom+xml" href="https://www.php.net/releases/feed.php" title="PHP Release feed">
+ <link rel="alternate" type="application/atom+xml" href="https://www.php.net/feed.atom" title="PHP: Hypertext Preprocessor">
+
+ <link rel="canonical" href="aliases.php.html">
+ <link rel="shorturl" href="aliases.php.html">
+ <link rel="alternate" href="aliases.php.html" hreflang="x-default">
+
+ <link rel="contents" href="index.php.html">
+ <link rel="index" href="appendices.php.html">
+ <link rel="prev" href="extensions.state.php.html">
+ <link rel="next" href="reserved.php.html">
+
+ <link rel="alternate" href="https://www.php.net/manual/en/aliases.php" hreflang="en">
+ <link rel="alternate" href="https://www.php.net/manual/de/aliases.php" hreflang="de">
+ <link rel="alternate" href="https://www.php.net/manual/es/aliases.php" hreflang="es">
+ <link rel="alternate" href="https://www.php.net/manual/fr/aliases.php" hreflang="fr">
+ <link rel="alternate" href="https://www.php.net/manual/it/aliases.php" hreflang="it">
+ <link rel="alternate" href="https://www.php.net/manual/ja/aliases.php" hreflang="ja">
+ <link rel="alternate" href="https://www.php.net/manual/pt_BR/aliases.php" hreflang="pt_BR">
+ <link rel="alternate" href="aliases.php.html" hreflang="ru">
+ <link rel="alternate" href="https://www.php.net/manual/tr/aliases.php" hreflang="tr">
+ <link rel="alternate" href="https://www.php.net/manual/zh/aliases.php" hreflang="zh">
+
+<link rel="stylesheet" type="text/css" href="../../cached.php%3Ft=1689765002&amp;f=%252Ffonts%252FFira%252Ffira.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../../cached.php%3Ft=1700771401&amp;f=%252Ffonts%252FFont-Awesome%252Fcss%252Ffontello.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../../cached.php%3Ft=1705413607&amp;f=%252Fstyles%252Ftheme-base.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../../cached.php%3Ft=1701958202&amp;f=%252Fstyles%252Ftheme-medium.css" media="screen">
+
+ <base href="">
+
+
+</head>
+<body class="docs ">
+
+<nav id="head-nav" class="navbar navbar-fixed-top">
+  <div class="navbar-inner clearfix">
+    <a href="https://www.php.net/" class="brand"><img src="../../images/logos/php-logo.svg" width="48" height="24" alt="php"></a>
+    <div id="mainmenu-toggle-overlay"></div>
+    <input type="checkbox" id="mainmenu-toggle">
+    <ul class="nav">
+      <li class=""><a href="https://www.php.net/downloads">Downloads</a></li>
+      <li class="active"><a href="https://www.php.net/docs.php">Documentation</a></li>
+      <li class=""><a href="https://www.php.net/get-involved" >Get Involved</a></li>
+      <li class=""><a href="https://www.php.net/support">Help</a></li>
+      <li class="">
+        <a href="https://www.php.net/releases/8.3/index.php">
+          <img src="../../images/php8/logo_php8_3.svg" alt="php8.3" height="22" width="60">
+        </a>
+      </li>
+    </ul>
+    <form class="navbar-search" id="topsearch" action="https://www.php.net/search.php">
+      <input type="hidden" name="show" value="quickref">
+      <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
+    </form>
+  </div>
+  <div id="flash-message"></div>
+</nav>
+<div class="headsup"><a href='https://www.php.net/conferences/index.php#2024-02-13-1'>Dutch PHP Conference 2024</a></div>
+<nav id="trick"><div><dl>
+<dt><a href='https://www.php.net/manual/en/getting-started.php'>Getting Started</a></dt>
+	<dd><a href='https://www.php.net/manual/en/introduction.php'>Introduction</a></dd>
+	<dd><a href='https://www.php.net/manual/en/tutorial.php'>A simple tutorial</a></dd>
+<dt><a href='https://www.php.net/manual/en/langref.php'>Language Reference</a></dt>
+	<dd><a href='https://www.php.net/manual/en/language.basic-syntax.php'>Basic syntax</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.types.php'>Types</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.variables.php'>Variables</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.constants.php'>Constants</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.expressions.php'>Expressions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.operators.php'>Operators</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.control-structures.php'>Control Structures</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.functions.php'>Functions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.oop5.php'>Classes and Objects</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.namespaces.php'>Namespaces</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.enumerations.php'>Enumerations</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.errors.php'>Errors</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.exceptions.php'>Exceptions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.fibers.php'>Fibers</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.generators.php'>Generators</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.attributes.php'>Attributes</a></dd>
+	<dd><a href='https://www.php.net/manual/en/language.references.php'>References Explained</a></dd>
+	<dd><a href='https://www.php.net/manual/en/reserved.variables.php'>Predefined Variables</a></dd>
+	<dd><a href='https://www.php.net/manual/en/reserved.exceptions.php'>Predefined Exceptions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/reserved.interfaces.php'>Predefined Interfaces and Classes</a></dd>
+	<dd><a href='https://www.php.net/manual/en/reserved.attributes.php'>Predefined Attributes</a></dd>
+	<dd><a href='https://www.php.net/manual/en/context.php'>Context options and parameters</a></dd>
+	<dd><a href='https://www.php.net/manual/en/wrappers.php'>Supported Protocols and Wrappers</a></dd>
+</dl>
+<dl>
+<dt><a href='https://www.php.net/manual/en/security.php'>Security</a></dt>
+	<dd><a href='https://www.php.net/manual/en/security.intro.php'>Introduction</a></dd>
+	<dd><a href='https://www.php.net/manual/en/security.general.php'>General considerations</a></dd>
+	<dd><a href='https://www.php.net/manual/en/security.cgi-bin.php'>Installed as CGI binary</a></dd>
+	<dd><a href='https://www.php.net/manual/en/security.apache.php'>Installed as an Apache module</a></dd>
+	<dd><a href='https://www.php.net/manual/en/security.sessions.php'>Session Security</a></dd>
+	<dd><a href='https://www.php.net/manual/en/security.filesystem.php'>Filesystem Security</a></dd>
+	<dd><a href='https://www.php.net/manual/en/security.database.php'>Database Security</a></dd>
+	<dd><a href='https://www.php.net/manual/en/security.errors.php'>Error Reporting</a></dd>
+	<dd><a href='https://www.php.net/manual/en/security.variables.php'>User Submitted Data</a></dd>
+	<dd><a href='https://www.php.net/manual/en/security.hiding.php'>Hiding PHP</a></dd>
+	<dd><a href='https://www.php.net/manual/en/security.current.php'>Keeping Current</a></dd>
+<dt><a href='https://www.php.net/manual/en/features.php'>Features</a></dt>
+	<dd><a href='https://www.php.net/manual/en/features.http-auth.php'>HTTP authentication with PHP</a></dd>
+	<dd><a href='https://www.php.net/manual/en/features.cookies.php'>Cookies</a></dd>
+	<dd><a href='https://www.php.net/manual/en/features.sessions.php'>Sessions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/features.xforms.php'>Dealing with XForms</a></dd>
+	<dd><a href='https://www.php.net/manual/en/features.file-upload.php'>Handling file uploads</a></dd>
+	<dd><a href='https://www.php.net/manual/en/features.remote-files.php'>Using remote files</a></dd>
+	<dd><a href='https://www.php.net/manual/en/features.connection-handling.php'>Connection handling</a></dd>
+	<dd><a href='https://www.php.net/manual/en/features.persistent-connections.php'>Persistent Database Connections</a></dd>
+	<dd><a href='https://www.php.net/manual/en/features.commandline.php'>Command line usage</a></dd>
+	<dd><a href='https://www.php.net/manual/en/features.gc.php'>Garbage Collection</a></dd>
+	<dd><a href='https://www.php.net/manual/en/features.dtrace.php'>DTrace Dynamic Tracing</a></dd>
+</dl>
+<dl>
+<dt><a href='https://www.php.net/manual/en/funcref.php'>Function Reference</a></dt>
+	<dd><a href='https://www.php.net/manual/en/refs.basic.php.php'>Affecting PHP's Behaviour</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.utilspec.audio.php'>Audio Formats Manipulation</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.remote.auth.php'>Authentication Services</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.utilspec.cmdline.php'>Command Line Specific Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.compression.php'>Compression and Archive Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.crypto.php'>Cryptography Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.database.php'>Database Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.calendar.php'>Date and Time Related Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.fileprocess.file.php'>File System Related Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.international.php'>Human Language and Character Encoding Support</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.utilspec.image.php'>Image Processing and Generation</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.remote.mail.php'>Mail Related Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.math.php'>Mathematical Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.utilspec.nontext.php'>Non-Text MIME Output</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.fileprocess.process.php'>Process Control Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.basic.other.php'>Other Basic Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.remote.other.php'>Other Services</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.search.php'>Search Engine Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.utilspec.server.php'>Server Specific Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.basic.session.php'>Session Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.basic.text.php'>Text Processing</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.basic.vartype.php'>Variable and Type Related Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.webservice.php'>Web Services</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.utilspec.windows.php'>Windows Only Extensions</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.xml.php'>XML Manipulation</a></dd>
+	<dd><a href='https://www.php.net/manual/en/refs.ui.php'>GUI Extensions</a></dd>
+</dl>
+<dl>
+<dt>Keyboard Shortcuts</dt><dt>?</dt>
+<dd>This help</dd>
+<dt>j</dt>
+<dd>Next menu item</dd>
+<dt>k</dt>
+<dd>Previous menu item</dd>
+<dt>g p</dt>
+<dd>Previous man page</dd>
+<dt>g n</dt>
+<dd>Next man page</dd>
+<dt>G</dt>
+<dd>Scroll to bottom</dd>
+<dt>g g</dt>
+<dd>Scroll to top</dd>
+<dt>g h</dt>
+<dd>Goto homepage</dd>
+<dt>g s</dt>
+<dd>Goto search<br>(current page)</dd>
+<dt>/</dt>
+<dd>Focus search box</dd>
+</dl></div></nav>
+<div id="goto">
+    <div class="search">
+         <div class="text"></div>
+         <div class="results"><ul></ul></div>
+   </div>
+</div>
+
+  <div id="breadcrumbs" class="clearfix">
+    <div id="breadcrumbs-inner">
+          <div class="next">
+        <a href="reserved.php.html">
+          Список зарезервированных слов &raquo;
+        </a>
+      </div>
+              <div class="prev">
+        <a href="extensions.state.php.html">
+          &laquo; По состоянию        </a>
+      </div>
+          <ul>
+            <li><a href='index.php.html'>Руководство по PHP</a></li>      <li><a href='appendices.php.html'>Приложения</a></li>      </ul>
+    </div>
+  </div>
+
+
+
+
+<div id="layout" class="clearfix">
+  <section id="layout-content">
+  <div class="page-tools">
+    <div class="change-language">
+      <form action="https://www.php.net/manual/change.php" method="get" id="changelang" name="changelang">
+        <fieldset>
+          <label for="changelang-langs">Change language:</label>
+          <select onchange="document.changelang.submit()" name="page" id="changelang-langs">
+            <option value='en/aliases.php'>English</option>
+            <option value='de/aliases.php'>German</option>
+            <option value='es/aliases.php'>Spanish</option>
+            <option value='fr/aliases.php'>French</option>
+            <option value='it/aliases.php'>Italian</option>
+            <option value='ja/aliases.php'>Japanese</option>
+            <option value='pt_BR/aliases.php'>Brazilian Portuguese</option>
+            <option value='ru/aliases.php' selected="selected">Russian</option>
+            <option value='tr/aliases.php'>Turkish</option>
+            <option value='zh/aliases.php'>Chinese (Simplified)</option>
+            <option value='help-translate.php'>Other</option>
+          </select>
+        </fieldset>
+      </form>
+    </div>
+    <div class="edit-bug">
+      <a href="https://github.com/php/doc-ru/blob/master/appendices/aliases.xml">Submit a Pull Request</a>
+      <a href="https://github.com/php/doc-ru/issues/new?body=From%20manual%20page:%20https:%2F%2Fphp.net%2Faliases%0A%0A---">Report a Bug</a>
+    </div>
+  </div><div id="aliases" class="appendix">
+ <h1>Список псевдонимов функций</h1>
+
+ <p class="para">
+  В PHP довольно много функций, доступных сразу по нескольким именам.
+  В некоторых случаях нет предпочитаемого варианта, хорошим примером
+  является <span class="function"><a href="function.is-int.php.html" class="function">is_int()</a></span> и <span class="function"><a href="function.is-integer.php.html" class="function">is_integer()</a></span>.
+  Однако, есть функции, изменившие свои названия вследствие чистки API или
+  по какой-либо другой причине, а старые имена были оставлены в целях
+  обратной совместимости. Обычно не рекомендуется использовать эти псевдонимы,
+  так как причиной их существования может быть устаревание или смена имени
+  основной функции, что может привести к проблемам портирования скрипта.
+  Данный список предоставляется для помощи при обновлении старых скриптов
+  к новому синтаксису.
+ </p>
+ <p class="para">
+  <table class="doctable table">
+   <caption><strong>Псевдонимы</strong></caption>
+   
+    <thead>
+     <tr>
+      <th>Псевдоним</th>
+      <th>Основная функция</th>
+      <th>Модуль</th>
+     </tr>
+
+    </thead>
+
+    <tbody class="tbody">
+     <tr>
+      <td>_</td>
+      <td><span class="function"><a href="function.gettext.php.html" class="function">gettext()</a></span></td>
+      <td><a href="ref.gettext.php.html" class="link">Gettext</a></td>
+     </tr>
+
+     <tr>
+      <td>chop</td>
+      <td><span class="function"><a href="function.rtrim.php.html" class="function">rtrim()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>close</td>
+      <td><span class="function"><a href="function.closedir.php.html" class="function">closedir()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>com_get</td>
+      <td><span class="function"><strong>com_propget()</strong></span></td>
+      <td><a href="ref.com.php.html" class="link">COM</a></td>
+     </tr>
+
+     <tr>
+      <td>com_propset</td>
+      <td><span class="function"><strong>com_propput()</strong></span></td>
+      <td><a href="ref.com.php.html" class="link">COM</a></td>
+     </tr>
+
+     <tr>
+      <td>com_set</td>
+      <td><span class="function"><strong>com_propput()</strong></span></td>
+      <td><a href="ref.com.php.html" class="link">COM</a></td>
+     </tr>
+
+     <tr>
+      <td>die</td>
+      <td><span class="function"><a href="function.exit.php.html" class="function">exit()</a></span></td>
+      <td><a href="ref.misc.php.html" class="link">Неклассифицированные функции</a></td>
+     </tr>
+
+     <tr>
+      <td>diskfreespace</td>
+      <td><span class="function"><a href="function.disk-free-space.php.html" class="function">disk_free_space()</a></span></td>
+      <td><a href="ref.filesystem.php.html" class="link">Файловая система</a></td>
+     </tr>
+
+     <tr>
+      <td>doubleval</td>
+      <td><span class="function"><a href="function.floatval.php.html" class="function">floatval()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>fputs</td>
+      <td><span class="function"><a href="function.fwrite.php.html" class="function">fwrite()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>gzputs</td>
+      <td><span class="function"><a href="function.gzwrite.php.html" class="function">gzwrite()</a></span></td>
+      <td><a href="ref.zlib.php.html" class="link">Zlib</a></td>
+     </tr>
+
+     <tr>
+      <td>i18n_convert</td>
+      <td><span class="function"><a href="function.mb-convert-encoding.php.html" class="function">mb_convert_encoding()</a></span></td>
+      <td><a href="ref.mbstring.php.html" class="link">Многобайтовые строки</a></td>
+     </tr>
+
+     <tr>
+      <td>i18n_discover_encoding</td>
+      <td><span class="function"><a href="function.mb-detect-encoding.php.html" class="function">mb_detect_encoding()</a></span></td>
+      <td><a href="ref.mbstring.php.html" class="link">Многобайтовые строки</a></td>
+     </tr>
+
+     <tr>
+      <td>i18n_http_input</td>
+      <td><span class="function"><a href="function.mb-http-input.php.html" class="function">mb_http_input()</a></span></td>
+      <td><a href="ref.mbstring.php.html" class="link">Многобайтовые строки</a></td>
+     </tr>
+
+     <tr>
+      <td>i18n_http_output</td>
+      <td><span class="function"><a href="function.mb-http-output.php.html" class="function">mb_http_output()</a></span></td>
+      <td><a href="ref.mbstring.php.html" class="link">Многобайтовые строки</a></td>
+     </tr>
+
+     <tr>
+      <td>i18n_internal_encoding</td>
+      <td><span class="function"><a href="function.mb-internal-encoding.php.html" class="function">mb_internal_encoding()</a></span></td>
+      <td><a href="ref.mbstring.php.html" class="link">Многобайтовые строки</a></td>
+     </tr>
+
+     <tr>
+      <td>i18n_ja_jp_hantozen</td>
+      <td><span class="function"><a href="function.mb-convert-kana.php.html" class="function">mb_convert_kana()</a></span></td>
+      <td><a href="ref.mbstring.php.html" class="link">Многобайтовые строки</a></td>
+     </tr>
+
+     <tr>
+      <td>i18n_mime_header_decode</td>
+      <td><span class="function"><a href="function.mb-decode-mimeheader.php.html" class="function">mb_decode_mimeheader()</a></span></td>
+      <td><a href="ref.mbstring.php.html" class="link">Многобайтовые строки</a></td>
+     </tr>
+
+     <tr>
+      <td>i18n_mime_header_encode</td>
+      <td><span class="function"><a href="function.mb-encode-mimeheader.php.html" class="function">mb_encode_mimeheader()</a></span></td>
+      <td><a href="ref.mbstring.php.html" class="link">Многобайтовые строки</a></td>
+     </tr>
+
+     <tr>
+      <td>imap_create</td>
+      <td><span class="function"><a href="function.imap-createmailbox.php.html" class="function">imap_createmailbox()</a></span></td>
+      <td><a href="ref.imap.php.html" class="link">IMAP</a></td>
+     </tr>
+
+     <tr>
+      <td>imap_fetchtext</td>
+      <td><span class="function"><a href="function.imap-body.php.html" class="function">imap_body()</a></span></td>
+      <td><a href="ref.imap.php.html" class="link">IMAP</a></td>
+     </tr>
+
+     <tr>
+      <td>imap_getmailboxes</td>
+      <td><span class="function"><strong>imap_list_full()</strong></span></td>
+      <td><a href="ref.imap.php.html" class="link">IMAP</a></td>
+     </tr>
+
+     <tr>
+      <td>imap_getsubscribed</td>
+      <td><span class="function"><strong>imap_lsub_full()</strong></span></td>
+      <td><a href="ref.imap.php.html" class="link">IMAP</a></td>
+     </tr>
+
+     <tr>
+      <td>imap_header</td>
+      <td><span class="function"><a href="function.imap-headerinfo.php.html" class="function">imap_headerinfo()</a></span></td>
+      <td><a href="ref.imap.php.html" class="link">IMAP</a></td>
+     </tr>
+
+     <tr>
+      <td>imap_listmailbox</td>
+      <td><span class="function"><a href="function.imap-list.php.html" class="function">imap_list()</a></span></td>
+      <td><a href="ref.imap.php.html" class="link">IMAP</a></td>
+     </tr>
+
+     <tr>
+      <td>imap_listsubscribed</td>
+      <td><span class="function"><a href="function.imap-lsub.php.html" class="function">imap_lsub()</a></span></td>
+      <td><a href="ref.imap.php.html" class="link">IMAP</a></td>
+     </tr>
+
+     <tr>
+      <td>imap_rename</td>
+      <td><span class="function"><a href="function.imap-renamemailbox.php.html" class="function">imap_renamemailbox()</a></span></td>
+      <td><a href="ref.imap.php.html" class="link">IMAP</a></td>
+     </tr>
+
+     <tr>
+      <td>imap_scan</td>
+      <td><span class="function"><a href="function.imap-listscan.php.html" class="function">imap_listscan()</a></span></td>
+      <td><a href="ref.imap.php.html" class="link">IMAP</a></td>
+     </tr>
+
+     <tr>
+      <td>imap_scanmailbox</td>
+      <td><span class="function"><a href="function.imap-listscan.php.html" class="function">imap_listscan()</a></span></td>
+      <td><a href="ref.imap.php.html" class="link">IMAP</a></td>
+     </tr>
+
+     <tr>
+      <td>ini_alter</td>
+      <td><span class="function"><a href="function.ini-set.php.html" class="function">ini_set()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>is_double</td>
+      <td><span class="function"><a href="function.is-float.php.html" class="function">is_float()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>is_integer</td>
+      <td><span class="function"><a href="function.is-int.php.html" class="function">is_int()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>is_long</td>
+      <td><span class="function"><a href="function.is-int.php.html" class="function">is_int()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>is_real</td>
+      <td><span class="function"><a href="function.is-float.php.html" class="function">is_float()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>is_writeable</td>
+      <td><span class="function"><a href="function.is-writable.php.html" class="function">is_writable()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>join</td>
+      <td><span class="function"><a href="function.implode.php.html" class="function">implode()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>key_exists</td>
+      <td><span class="function"><a href="function.array-key-exists.php.html" class="function">array_key_exists()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>ldap_close</td>
+      <td><span class="function"><a href="function.ldap-unbind.php.html" class="function">ldap_unbind()</a></span></td>
+      <td><a href="ref.ldap.php.html" class="link">LDAP</a></td>
+     </tr>
+
+     <tr>
+      <td>mbstrcut</td>
+      <td><span class="function"><a href="function.mb-strcut.php.html" class="function">mb_strcut()</a></span></td>
+      <td><a href="ref.mbstring.php.html" class="link">Многобайтовые строки</a></td>
+     </tr>
+
+     <tr>
+      <td>mbstrlen</td>
+      <td><span class="function"><a href="function.mb-strlen.php.html" class="function">mb_strlen()</a></span></td>
+      <td><a href="ref.mbstring.php.html" class="link">Многобайтовые строки</a></td>
+     </tr>
+
+     <tr>
+      <td>mbstrpos</td>
+      <td><span class="function"><a href="function.mb-strpos.php.html" class="function">mb_strpos()</a></span></td>
+      <td><a href="ref.mbstring.php.html" class="link">Многобайтовые строки</a></td>
+     </tr>
+
+     <tr>
+      <td>mbstrrpos</td>
+      <td><span class="function"><a href="function.mb-strrpos.php.html" class="function">mb_strrpos()</a></span></td>
+      <td><a href="ref.mbstring.php.html" class="link">Многобайтовые строки</a></td>
+     </tr>
+
+     <tr>
+      <td>mbsubstr</td>
+      <td><span class="function"><a href="function.mb-substr.php.html" class="function">mb_substr()</a></span></td>
+      <td><a href="ref.mbstring.php.html" class="link">Многобайтовые строки</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql</td>
+      <td><span class="function"><a href="function.mysql-db-query.php.html" class="function">mysql_db_query()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_createdb</td>
+      <td><span class="function"><a href="function.mysql-create-db.php.html" class="function">mysql_create_db()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_db_name</td>
+      <td><span class="function"><a href="function.mysql-result.php.html" class="function">mysql_result()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_dbname</td>
+      <td><span class="function"><a href="function.mysql-result.php.html" class="function">mysql_result()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_dropdb</td>
+      <td><span class="function"><a href="function.mysql-drop-db.php.html" class="function">mysql_drop_db()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_fieldflags</td>
+      <td><span class="function"><a href="function.mysql-field-flags.php.html" class="function">mysql_field_flags()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_fieldlen</td>
+      <td><span class="function"><a href="function.mysql-field-len.php.html" class="function">mysql_field_len()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_fieldname</td>
+      <td><span class="function"><a href="function.mysql-field-name.php.html" class="function">mysql_field_name()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_fieldtable</td>
+      <td><span class="function"><a href="function.mysql-field-table.php.html" class="function">mysql_field_table()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_fieldtype</td>
+      <td><span class="function"><a href="function.mysql-field-type.php.html" class="function">mysql_field_type()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_freeresult</td>
+      <td><span class="function"><a href="function.mysql-free-result.php.html" class="function">mysql_free_result()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_listdbs</td>
+      <td><span class="function"><a href="function.mysql-list-dbs.php.html" class="function">mysql_list_dbs()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_listfields</td>
+      <td><span class="function"><a href="function.mysql-list-fields.php.html" class="function">mysql_list_fields()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_listtables</td>
+      <td><span class="function"><a href="function.mysql-list-tables.php.html" class="function">mysql_list_tables()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_numfields</td>
+      <td><span class="function"><a href="function.mysql-num-fields.php.html" class="function">mysql_num_fields()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_numrows</td>
+      <td><span class="function"><a href="function.mysql-num-rows.php.html" class="function">mysql_num_rows()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_selectdb</td>
+      <td><span class="function"><a href="function.mysql-select-db.php.html" class="function">mysql_select_db()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>mysql_tablename</td>
+      <td><span class="function"><a href="function.mysql-result.php.html" class="function">mysql_result()</a></span></td>
+      <td><a href="ref.mysql.php.html" class="link">MySQL</a></td>
+     </tr>
+
+     <tr>
+      <td>ociassignelem</td>
+      <td><a href="ocicollection.assignelem.php.html" class="link">OCICollection::assignElem</a></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocibindbyname</td>
+      <td><span class="function"><a href="function.oci-bind-by-name.php.html" class="function">oci_bind_by_name()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicancel</td>
+      <td><span class="function"><a href="function.oci-cancel.php.html" class="function">oci_cancel()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicloselob</td>
+      <td><a href="ocilob.close.php.html" class="link">OCILob::close</a></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicollappend</td>
+      <td><a href="ocicollection.append.php.html" class="link">OCICollection::append</a></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicollassign</td>
+      <td><a href="ocicollection.assign.php.html" class="link">OCICollection::assign</a></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicollmax</td>
+      <td><a href="ocicollection.max.php.html" class="link">OCICollection::max</a></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicollsize</td>
+      <td><a href="ocicollection.size.php.html" class="link">OCICollection::size</a></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicolltrim</td>
+      <td><a href="ocicollection.trim.php.html" class="link">OCICollection::trim</a></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicolumnisnull</td>
+      <td><span class="function"><a href="function.oci-field-is-null.php.html" class="function">oci_field_is_null()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicolumnname</td>
+      <td><span class="function"><a href="function.oci-field-name.php.html" class="function">oci_field_name()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicolumnprecision</td>
+      <td><span class="function"><a href="function.oci-field-precision.php.html" class="function">oci_field_precision()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicolumnscale</td>
+      <td><span class="function"><a href="function.oci-field-scale.php.html" class="function">oci_field_scale()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicolumnsize</td>
+      <td><span class="function"><a href="function.oci-field-size.php.html" class="function">oci_field_size()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicolumntype</td>
+      <td><span class="function"><a href="function.oci-field-type.php.html" class="function">oci_field_type()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicolumntyperaw</td>
+      <td><span class="function"><a href="function.oci-field-type-raw.php.html" class="function">oci_field_type_raw()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocicommit</td>
+      <td><span class="function"><a href="function.oci-commit.php.html" class="function">oci_commit()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocidefinebyname</td>
+      <td><span class="function"><a href="function.oci-define-by-name.php.html" class="function">oci_define_by_name()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocierror</td>
+      <td><span class="function"><a href="function.oci-error.php.html" class="function">oci_error()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ociexecute</td>
+      <td><span class="function"><a href="function.oci-execute.php.html" class="function">oci_execute()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocifetch</td>
+      <td><span class="function"><a href="function.oci-fetch.php.html" class="function">oci_fetch()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocifetchinto</td>
+      <td><span class="function"><a href="function.oci-fetch-array.php.html" class="function">oci_fetch_array()</a></span>, <span class="function"><a href="function.oci-fetch-row.php.html" class="function">oci_fetch_row()</a></span>, <span class="function"><a href="function.oci-fetch-assoc.php.html" class="function">oci_fetch_assoc()</a></span>, <span class="function"><a href="function.oci-fetch-object.php.html" class="function">oci_fetch_object()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocifetchstatement</td>
+      <td><span class="function"><a href="function.oci-fetch-all.php.html" class="function">oci_fetch_all()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocifreecollection</td>
+      <td><a href="ocicollection.free.php.html" class="link">OCICollection::free</a></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocifreecursor</td>
+      <td><span class="function"><a href="function.oci-free-statement.php.html" class="function">oci_free_statement()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocifreedesc</td>
+      <td><span class="function"><a href="function.oci-free-descriptor.php.html" class="function">oci_free_descriptor()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocifreestatement</td>
+      <td><span class="function"><a href="function.oci-free-statement.php.html" class="function">oci_free_statement()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocigetelem</td>
+      <td><a href="ocicollection.getelem.php.html" class="link">OCICollection::getElem</a></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ociinternaldebug</td>
+      <td><span class="function"><a href="function.oci-internal-debug.php.html" class="function">oci_internal_debug()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ociloadlob</td>
+      <td><a href="ocilob.load.php.html" class="link">OCILob::load</a></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocilogon</td>
+      <td><span class="function"><a href="function.oci-connect.php.html" class="function">oci_connect()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocinewcollection</td>
+      <td><span class="function"><a href="function.oci-new-collection.php.html" class="function">oci_new_collection()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocinewcursor</td>
+      <td><span class="function"><a href="function.oci-new-cursor.php.html" class="function">oci_new_cursor()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocinewdescriptor</td>
+      <td><span class="function"><a href="function.oci-new-descriptor.php.html" class="function">oci_new_descriptor()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocinlogon</td>
+      <td><span class="function"><a href="function.oci-new-connect.php.html" class="function">oci_new_connect()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocinumcols</td>
+      <td><span class="function"><a href="function.oci-num-fields.php.html" class="function">oci_num_fields()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ociparse</td>
+      <td><span class="function"><a href="function.oci-parse.php.html" class="function">oci_parse()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocipasswordchange</td>
+      <td><span class="function"><a href="function.oci-password-change.php.html" class="function">oci_password_change()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ociplogon</td>
+      <td><span class="function"><a href="function.oci-pconnect.php.html" class="function">oci_pconnect()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ociresult</td>
+      <td><span class="function"><a href="function.oci-result.php.html" class="function">oci_result()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocirollback</td>
+      <td><span class="function"><a href="function.oci-rollback.php.html" class="function">oci_rollback()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocisavelob</td>
+      <td><a href="ocilob.save.php.html" class="link">OCILob::save</a></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocisavelobfile</td>
+      <td><a href="ocilob.import.php.html" class="link">OCILob::import</a></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ociserverversion</td>
+      <td><span class="function"><a href="function.oci-server-version.php.html" class="function">oci_server_version()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocisetprefetch</td>
+      <td><span class="function"><a href="function.oci-set-prefetch.php.html" class="function">oci_set_prefetch()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ocistatementtype</td>
+      <td><span class="function"><a href="function.oci-statement-type.php.html" class="function">oci_statement_type()</a></span></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ociwritelobtofile</td>
+      <td><a href="ocilob.export.php.html" class="link">OCILob::export</a></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>ociwritetemporarylob</td>
+      <td><a href="ocilob.writetemporary.php.html" class="link">OCILob::writeTemporary</a></td>
+      <td><a href="ref.oci8.php.html" class="link">OCI8</a></td>
+     </tr>
+
+     <tr>
+      <td>odbc_do</td>
+      <td><span class="function"><a href="function.odbc-exec.php.html" class="function">odbc_exec()</a></span></td>
+      <td><a href="ref.uodbc.php.html" class="link">ODBC</a></td>
+     </tr>
+
+     <tr>
+      <td>odbc_field_precision</td>
+      <td><span class="function"><a href="function.odbc-field-len.php.html" class="function">odbc_field_len()</a></span></td>
+      <td><a href="ref.uodbc.php.html" class="link">ODBC</a></td>
+     </tr>
+
+     <tr>
+      <td>pg_clientencoding</td>
+      <td><span class="function"><a href="function.pg-client-encoding.php.html" class="function">pg_client_encoding()</a></span></td>
+      <td><a href="ref.pgsql.php.html" class="link">PostgreSQL</a></td>
+     </tr>
+
+     <tr>
+      <td>pg_setclientencoding</td>
+      <td><span class="function"><a href="function.pg-set-client-encoding.php.html" class="function">pg_set_client_encoding()</a></span></td>
+      <td><a href="ref.pgsql.php.html" class="link">PostgreSQL</a></td>
+     </tr>
+
+     <tr>
+      <td>pos</td>
+      <td><span class="function"><a href="function.current.php.html" class="function">current()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>recode</td>
+      <td><span class="function"><a href="function.recode-string.php.html" class="function">recode_string()</a></span></td>
+      <td><a href="ref.recode.php.html" class="link">Recode</a></td>
+     </tr>
+
+     <tr>
+      <td>show_source</td>
+      <td><span class="function"><a href="function.highlight-file.php.html" class="function">highlight_file()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>sizeof</td>
+      <td><span class="function"><a href="function.count.php.html" class="function">count()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>snmpwalkoid</td>
+      <td><span class="function"><a href="function.snmprealwalk.php.html" class="function">snmprealwalk()</a></span></td>
+      <td><a href="ref.snmp.php.html" class="link">SNMP</a></td>
+     </tr>
+
+     <tr>
+      <td>strchr</td>
+      <td><span class="function"><a href="function.strstr.php.html" class="function">strstr()</a></span></td>
+      <td>Базовый синтаксис</td>
+     </tr>
+
+     <tr>
+      <td>xptr_new_context</td>
+      <td><span class="function"><strong>xpath_new_context()</strong></span></td>
+      <td class="empty">&nbsp;</td>
+     </tr>
+
+    </tbody>
+   
+  </table>
+
+ </p>
+</div>
+<section id="usernotes">
+ <div class="head">
+  <span class="action"><a href="https://www.php.net/manual/add-note.php?sect=aliases&amp;redirect=https://www.php.net/manual/ru/aliases.php">＋<small>add a note</small></a></span>
+  <h3 class="title">User Contributed Notes </h3>
+ </div>
+ <div class="note">There are no user contributed notes for this page.</div></section>    </section><!-- layout-content -->
+        <aside class='layout-menu'>
+
+        <ul class='parent-menu-list'>
+                                    <li>
+                <a href="appendices.php.html">Приложения</a>
+
+                                    <ul class='child-menu-list'>
+
+                                                <li class="">
+                            <a href="history.php.html" title="История PHP и смежных проектов">История PHP и смежных проектов</a>
+                        </li>
+                                                <li class="">
+                            <a href="migration83.php.html" title="Миграция с PHP 8.2.x на PHP 8.3.x">Миграция с PHP 8.2.x на PHP 8.3.x</a>
+                        </li>
+                                                <li class="">
+                            <a href="migration82.php.html" title="Миграция с PHP 8.1.x на PHP 8.2.x">Миграция с PHP 8.1.x на PHP 8.2.x</a>
+                        </li>
+                                                <li class="">
+                            <a href="migration81.php.html" title="Миграция с PHP 8.0.x на PHP 8.1.x">Миграция с PHP 8.0.x на PHP 8.1.x</a>
+                        </li>
+                                                <li class="">
+                            <a href="migration80.php.html" title="Миграция с PHP 7.4.x на PHP 8.0.x">Миграция с PHP 7.4.x на PHP 8.0.x</a>
+                        </li>
+                                                <li class="">
+                            <a href="migration74.php.html" title="Миграция с PHP 7.3.x на PHP 7.4.x">Миграция с PHP 7.3.x на PHP 7.4.x</a>
+                        </li>
+                                                <li class="">
+                            <a href="migration73.php.html" title="Миграция с PHP 7.2.x на PHP 7.3.x">Миграция с PHP 7.2.x на PHP 7.3.x</a>
+                        </li>
+                                                <li class="">
+                            <a href="migration72.php.html" title="Миграция с PHP 7.1.x на PHP 7.2.x">Миграция с PHP 7.1.x на PHP 7.2.x</a>
+                        </li>
+                                                <li class="">
+                            <a href="migration71.php.html" title="Миграция с PHP 7.0.x на PHP 7.1.x">Миграция с PHP 7.0.x на PHP 7.1.x</a>
+                        </li>
+                                                <li class="">
+                            <a href="migration70.php.html" title="Миграция с PHP 5.6.x на PHP 7.0.x">Миграция с PHP 5.6.x на PHP 7.0.x</a>
+                        </li>
+                                                <li class="">
+                            <a href="migration56.php.html" title="Миграция с PHP 5.5.x на PHP 5.6.x">Миграция с PHP 5.5.x на PHP 5.6.x</a>
+                        </li>
+                                                <li class="">
+                            <a href="debugger.php.html" title="Отладка в PHP">Отладка в PHP</a>
+                        </li>
+                                                <li class="">
+                            <a href="configure.php.html" title="Опции конфигурации">Опции конфигурации</a>
+                        </li>
+                                                <li class="">
+                            <a href="ini.php.html" title="Директивы php.ini">Директивы php.ini</a>
+                        </li>
+                                                <li class="">
+                            <a href="extensions.php.html" title="Список/классификация модулей">Список/классификация модулей</a>
+                        </li>
+                                                <li class="current">
+                            <a href="aliases.php.html" title="Список псевдонимов функций">Список псевдонимов функций</a>
+                        </li>
+                                                <li class="">
+                            <a href="reserved.php.html" title="Список зарезервированных слов">Список зарезервированных слов</a>
+                        </li>
+                                                <li class="">
+                            <a href="resource.php.html" title="Список типов ресурсов">Список типов ресурсов</a>
+                        </li>
+                                                <li class="">
+                            <a href="filters.php.html" title="Список доступных фильтров">Список доступных фильтров</a>
+                        </li>
+                                                <li class="">
+                            <a href="transports.php.html" title="Список поддерживаемых транспортных протоколов">Список поддерживаемых транспортных протоколов</a>
+                        </li>
+                                                <li class="">
+                            <a href="types.comparisons.php.html" title="Таблицы сравнения типов PHP">Таблицы сравнения типов PHP</a>
+                        </li>
+                                                <li class="">
+                            <a href="tokens.php.html" title="Список меток (tokens) парсера">Список меток (tokens) парсера</a>
+                        </li>
+                                                <li class="">
+                            <a href="userlandnaming.php.html" title="Руководство по именованию">Руководство по именованию</a>
+                        </li>
+                                                <li class="">
+                            <a href="about.php.html" title="Об этом руководстве">Об этом руководстве</a>
+                        </li>
+                                                <li class="">
+                            <a href="cc.license.php.html" title="Creative Commons Attribution 3.0">Creative Commons Attribution 3.0</a>
+                        </li>
+                                                <li class="">
+                            <a href="indexes.php.html" title="Алфавитный список">Алфавитный список</a>
+                        </li>
+                                                <li class="">
+                            <a href="doc.changelog.php.html" title="Список изменений">Список изменений</a>
+                        </li>
+                        
+                    </ul>
+                
+            </li>
+                        
+                    </ul>
+    </aside>
+
+
+  </div><!-- layout -->
+
+  <footer>
+    <div class="container footer-content">
+      <div class="row-fluid">
+      <ul class="footmenu">
+        <li><a href="https://www.php.net/copyright.php">Copyright &copy; 2001-2024 The PHP Group</a></li>
+        <li><a href="https://www.php.net/my.php">My PHP.net</a></li>
+        <li><a href="https://www.php.net/contact.php">Contact</a></li>
+        <li><a href="https://www.php.net/sites.php">Other PHP.net sites</a></li>
+        <li><a href="https://www.php.net/privacy.php">Privacy policy</a></li>
+      </ul>
+      </div>
+    </div>
+  </footer>
+
+    
+ <!-- External and third party libraries. -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="../../cached.php%3Ft=1657730402&amp;f=%252Fjs%252Fext%252Fhogan-3.0.2.min.js"></script>
+<script src="../../cached.php%3Ft=1421837618&amp;f=%252Fjs%252Fext%252Ftypeahead.min.js"></script>
+<script src="../../cached.php%3Ft=1657876202&amp;f=%252Fjs%252Fext%252Fmousetrap.min.js"></script>
+<script src="../../cached.php%3Ft=1657730402&amp;f=%252Fjs%252Fext%252Fjquery.scrollTo.min.js"></script>
+<script src="../../cached.php%3Ft=1701958202&amp;f=%252Fjs%252Fsearch.js"></script>
+<script src="../../cached.php%3Ft=1701958202&amp;f=%252Fjs%252Fcommon.js"></script>
+
+<a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="../../images/to-top@2x.png"></a>
+
+</body>
+</html>
