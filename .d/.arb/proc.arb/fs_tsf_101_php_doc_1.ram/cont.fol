@@ -49,6 +49,6 @@ for path_html in $(d2e_ -n -ff ${a1}); do
     echo -e "${HLIGHT}--- html2pdf__ ${a2}/$name_dir_arb/.grot/.html/${name_file_html} ${a2}/$name_dir_arb/.grot/.pdf ---${NORMAL}" #start files
     # read -p "DO?"
     html2pdf__ ${a2}/$name_dir_arb/.grot/.html/${name_file_html} ${a2}/$name_dir_arb/.grot/.pdf
-    
+
 done
 return 0
