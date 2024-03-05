@@ -1,0 +1,61 @@
+#!/bin/bash
+
+local hint="\${ARGS[3]}: 8000+{} , \${ARGS[4]}: path to .php"
+
+if ! is_num ${ARGS[3]}; then
+    plt_exit "in ${FNN} : NOT_NUMBER : '${ARGS[3]}' :: ${hint} : return 1"
+    return 1
+fi
+
+if [[ -z "${ARGS[4]}" ]]; then
+    plt_info "\${ARGS[4]} :: NOT_DEFINE :: ${hint} : return 1"
+    return 1
+fi
+
+if ! [[ -f "${ARGS[4]}" ]]; then
+    plt_info "\${ARGS[4]} :: NOT_FILE :: ${hint} : return 1"
+    return 1
+fi
+
+local delta
+delta=${ARGS[3]}
+local num_port
+num_port=$((8000 + delta))
+
+# local name_session="${ARGS[4]}:${num_port}"
+local name_session="php_${num_port}"
+# a2="${ARGS[4]}"
+# echo "\${a2}='${ARGS[4]}' is: ... "
+
+# ptr_path="${a1}"
+# ptr_path="$("${_abs_path}" "${PPWD}" "ptr_path")"
+
+# if isn_yes__ "DO? ::XXX::ENTER or ^C"; then return 0; fi
+
+#* arb2mm_ 1 1 1
+
+echo -e "${GREEN}\$name_session = $name_session${NORMAL}" #print variable
+echo -e "${GREEN}\$num_port = $num_port${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS[4]} = ${ARGS[4]}${NORMAL}"       #print variable
+
+# kill -9 "$(lsof -t -i:${num_port})"
+kill_port__ ${num_port}
+
+tm_k__ ${name_session}
+
+tmux new -s ${name_session} -d
+
+tmux split-window -h -t ${name_session}:0.0
+
+tmux send-keys -t ${name_session}:0.0 "php -S localhost:${num_port} ${ARGS[4]}" Enter
+
+sleep 3
+
+tmux send-keys -t "${name_session}":0.1 "links2 http://localhost:${num_port}/" Enter
+
+echo -e "${HLIGHT}--- tm_a__ ---${NORMAL}" #start files
+tm_a__
+
+# tmux split-window -h -t "${a1}":0.1
+# tmux send-keys -t "${a1}":0.1 'echo "that 1 window"' Enter
+# tmux send-keys -t "${a1}":0.2 'echo "that 2 window"' Enter

@@ -29,8 +29,9 @@ tm_k__ "${a1}"
 tmux new -s "${a1}" -d
 tmux split-window -h -t "${a1}":0.0
 
-tmux send-keys -t "${a1}":0.1 "links2 http://localhost:8000/"
-tmux send-keys -t "${a1}":0.0 "php -S localhost:8000 -t ${ARGS[3]}"
+tmux send-keys -t "${a1}":0.0 "php -S localhost:8000 -t ${ARGS[3]}" Enter
+sleep 3
+tmux send-keys -t "${a1}":0.1 "links2 http://localhost:8000/" Enter
 
 tm_a__
 

@@ -1,1 +1,1 @@
-${ARGS[3]} = path to .php file , split with links 
+${ARGS[3]} = path to dir with index.php  , split with links 
