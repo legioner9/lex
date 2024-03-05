@@ -1,1 +1,1 @@
-${ARGS[3]} = path to file .php  , split with links 
+${ARGS[3]}=delta+8000 port ${ARGS[4]} = path to file .php  , split with links 
