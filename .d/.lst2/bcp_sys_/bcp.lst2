@@ -1,5 +1,5 @@
 ${HOME}/.enterrc@enterrc
-${HOME}/.strc.d@strc.d
+${HOME}/.st.rc.d@st.rc.d
 
 ${HOME}/.bashrc@bashrc
 ${HOME}/.bash_profile@bash_profile
