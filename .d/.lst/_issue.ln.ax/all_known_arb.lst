@@ -38,7 +38,7 @@ ${REPO_PATH}/NMall/.d/.arb/mall.arb
 
 ${REPO_PATH}/NPerl/.d/.arb/man.arb
 
-${REPO_PATH}/NDocker/.d/.arb/api.arb
-${REPO_PATH}/NDocker/.d/.arb/cli.arb
-${REPO_PATH}/NDocker/.d/.arb/cpf.arb
-${REPO_PATH}/NDocker/.d/.arb/dkf.arb
+${REPO_PATH}/NDocker/.d/.arb/off.arb
+${REPO_PATH}/NDocker/.d/.arb/pau.arb
+${REPO_PATH}/NDocker/.d/.arb/stu.arb 
+${REPO_PATH}/NDocker/.d/.arb/man.arb
