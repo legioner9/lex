@@ -11,6 +11,8 @@ ${HOME}/.digrc@digrc
 ${HOME}/.mailrc@mailrc
 ${HOME}/.wgetrc@wgetrc
 
+${HOME}/.docker/daemon.json@docker_daemon_json
+
 ${HOME}/.clang-format@clang-format
 ${HOME}/.links@links
 ${HOME}/.tmux.conf@tmux_conf
