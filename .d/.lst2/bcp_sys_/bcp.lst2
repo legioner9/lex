@@ -1,6 +1,8 @@
 ${HOME}/.enterrc@enterrc
 ${HOME}/.st.rc.d@st.rc.d
 
+${HOME}/.starc@starc
+
 ${HOME}/.bashrc@bashrc
 ${HOME}/.bash_profile@bash_profile
 
