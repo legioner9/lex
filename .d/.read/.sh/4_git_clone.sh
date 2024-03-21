@@ -2,6 +2,9 @@
 
 echo -e "${GREEN} start 4_git_clone.sh ${NORMAL}" #print variable
 
+#! EXAMP! https://gitflic.ru/project/legioner9/lex/file/downloadAll?branch=master
+#! EXAMP! https://github.com/legioner9/mane/archive/refs/heads/master.zip
+
 mkdir -pv "$HOME"/REPOBARE/_repo
 
 #! git@gitflic.ru:legioner9
@@ -14,8 +17,10 @@ read -p "INFO: elegendy bare ENTER"
 
 bare_arr=(https://gitflic.ru/project/legioner9
     https://github.com/legioner9
+    https://gitverse.ru/sc/legioner9
     git@gitflic.ru:legioner9
     git@github.com:legioner9
+    ssh://git@gitverse.ru:2222/legioner9
     /run/media/"${USER}"/MY_ONE/REPOBARE/_bare
     /run/media/"${USER}"/TOSHIBA_EXT/REPOBARE/_bare
     /run/media/"${USER}"/TOSH/REPOBARE/_bare
@@ -25,6 +30,7 @@ repo_name_arr=(plt
     communis
     fonsh
     lex
+    sta
 )
 
 cd "$HOME"/REPOBARE/_repo || {
