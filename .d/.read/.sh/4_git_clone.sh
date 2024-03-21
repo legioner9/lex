@@ -11,7 +11,7 @@ mkdir -pv "$HOME"/REPOBARE/_repo
 #! git@github.com:legioner9
 #! /run/media/st/MY_ONE/REPOBARE/_bare
 #! /run/media/st/TOSHIBA_EXT/REPOBARE/_bare
-#! /run/media/st/TOSH/REPOBARE/_bare
+#! /run/media/st/TOSH/REPOBARE/_bare 
 
 read -p "INFO: elegendy bare ENTER"
 
@@ -31,6 +31,7 @@ repo_name_arr=(plt
     fonsh
     lex
     sta
+    mane
 )
 
 cd "$HOME"/REPOBARE/_repo || {
