@@ -52,8 +52,8 @@ for item_reoo_name_arr in ${repo_name_arr[@]}; do
     echo "git clone ${bare_path}/${item_reoo_name_arr}"
 
     git clone ${bare_path}/${item_reoo_name_arr} || {
-        read -p "fail: git clone git@gitflic.ru:legioner9/plt.git, return 1"
-        return 1
+        read -p "IS_ERROR? fail: git clone git@gitflic.ru:legioner9/plt.git, continue"
+        continue
     }
 
 done
