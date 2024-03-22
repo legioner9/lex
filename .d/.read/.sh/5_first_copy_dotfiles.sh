@@ -5,7 +5,7 @@ echo -e "${GREEN} start 5_first_copy_dotfiles.sh ${NORMAL}" #print variable
 #! dot_repo_1234234 from plt_init_.sh = .repo
 
 path_tar_dir="${dot_repo_1234234}/bcp_sys_"
-arr_tar_file=(enterrc repo_path plt_path fonsh_path pd_path pd_read)
+arr_tar_file=(enterrc manerc st.rc.d repo_path plt_path fonsh_path pd_path pd_read)
 
 for item in ${arr_tar_file[@]}; do
     echo -e "${HLIGHT}--- tar -xzvf ${path_tar_dir}/${item}.tar.gz -C $HOME ---${NORMAL}"
@@ -17,9 +17,15 @@ touch ~/.bashrc
 touch ~/.starc
 : >~/.stabit
 
-if ! grep -F 'if [ -f ~/.enterrc ]; then . ~/.enterrc; fi' <~/.bashrc; then
-    echo 'if [ -f ~/.enterrc ]; then . ~/.enterrc; fi' >>~/.bashrc
+# if ! grep -F 'if [ -f ~/.enterrc ]; then . ~/.enterrc; fi' <~/.bashrc; then
+#     echo 'if [ -f ~/.enterrc ]; then . ~/.enterrc; fi' >>~/.bashrc
+# fi
+
+if ! grep -F 'if [[ -f ~/.st.rc.d/.st.rc ]]; then . ~/.st.rc.d/.st.rc >/dev/null; fi' <~/.bashrc; then
+    echo 'if [[ -f ~/.st.rc.d/.st.rc ]]; then . ~/.st.rc.d/.st.rc >/dev/null; fi' >>~/.bashrc
 fi
+
+~/.st.rc.d/.st.rc
 
 if [ -f ${HOME}/.vscode-oss ]; then
     rm ${HOME}/.vscode-oss
