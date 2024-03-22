@@ -14,6 +14,8 @@ if [[ "${RESET_PLT_FONSH_TO_DEFAULT_}" == "y" ]]; then
     rm -fvi "$HOME"/.pd_path
     rm -fvi "$HOME"/.repo_path
     rm -fvi "$HOME"/.enterrc
+    rm -fvi "$HOME"/.manerc
+    rm -frvi "$HOME"/.st.rc.d
 
     read -p "DO? only 'y' remove all repo :: rm -rfv $HOME/REPOBARE"
     read yes
