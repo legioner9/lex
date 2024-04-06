@@ -1,7 +1,7 @@
 ${HOME}/.enterrc@enterrc
 ${HOME}/.manerc@manerc
 ${HOME}/.st.rc.d@st.rc.d
-
+${HOME}/.st_rc_drc@st_rc_drc
 ${HOME}/.starc@starc
 
 ${HOME}/.bashrc@bashrc
