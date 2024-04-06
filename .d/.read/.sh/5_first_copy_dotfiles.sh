@@ -25,7 +25,10 @@ if ! grep -F 'if [[ -f ~/.st.rc.d/.st.rc ]]; then . ~/.st.rc.d/.st.rc >/dev/null
     echo 'if [[ -f ~/.st.rc.d/.st.rc ]]; then . ~/.st.rc.d/.st.rc >/dev/null; fi' >>~/.bashrc
 fi
 
-~/.st.rc.d/.st.rc
+#! ~/.st.rc.d/.st.rc
+
+touch ~/.mane.path
+touch ~/.st_rc_d.path
 
 if [ -f ${HOME}/.vscode-oss ]; then
     rm ${HOME}/.vscode-oss
