@@ -1,6 +1,6 @@
 ${HOME}/.enterrc@enterrc
 ${HOME}/.mane.rc@manerc
-${HOME}/.st.rc.d@st.rc.d
+#${HOME}/.st.rc.d@st.rc.d
 ${HOME}/.st_rc_d.rc@st_rc_drc
 ${HOME}/.starc@starc
 

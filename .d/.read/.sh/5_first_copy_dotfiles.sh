@@ -4,8 +4,53 @@ echo -e "${GREEN} start 5_first_copy_dotfiles.sh ${NORMAL}" #print variable
 
 #! dot_repo_1234234 from plt_init_.sh = .repo
 
+#* UNZIP .st.rc.d
+
+if [[ -f ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st.rc.d.zip ]]; then
+
+    rm ${HOME}/.st.rc.d.zip
+    cp ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st.rc.d.zip ${HOME}
+    cd ${HOME}
+    unzip ${HOME}/.st.rc.d.zip
+
+else
+    read -p "NOT_FILE: ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st.rc.d.zip mast ^C!!!"
+fi
+
+#* UNZIP .st_rc_d.rc
+
+if [[ -f ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st_rc_d.rc.zip ]]; then
+
+    rm ${HOME}/.st_rc_d.rc.zip
+    cp ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st_rc_d.rc.zip ${HOME}
+    cd ${HOME}
+    unzip ${HOME}/.st_rc_d.rc.zip
+
+else
+    read -p "NOT_FILE: ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st_rc_d.rc.zip mast ^C!!!"
+fi
+
+#****** CHECK ${HOME}/.st_rc_d.path
+
+touch ${HOME}/.st_rc_d.path
+
+echo "exec : cat file://${HOME}/.st_rc_d.path"
+cat ${HOME}/.st_rc_d.path
+read -p "CHECK this path to repo ?( while examp : \${HOME}/REPOBARE/_repo/st_rc_d)"
+
+#****** CHECK ${HOME}/.mane.path
+
+touch ${HOME}/.mane.path
+
+echo "exec : cat file://${HOME}/.mane.path"
+cat ${HOME}/.mane.path
+read -p "CHECK this path to repo ?( while examp : \${HOME}/REPOBARE/_repo/mane)"
+
+#******
+
 path_tar_dir="${dot_repo_1234234}/bcp_sys_"
-arr_tar_file=(enterrc manerc st.rc.d repo_path plt_path fonsh_path pd_path pd_read)
+arr_tar_file=(enterrc manerc st_rc_drc repo_path plt_path fonsh_path pd_path pd_read)
+# arr_tar_file=(enterrc manerc st.rc.d repo_path plt_path fonsh_path pd_path pd_read)
 
 for item in ${arr_tar_file[@]}; do
     echo -e "${HLIGHT}--- tar -xzvf ${path_tar_dir}/${item}.tar.gz -C $HOME ---${NORMAL}"
