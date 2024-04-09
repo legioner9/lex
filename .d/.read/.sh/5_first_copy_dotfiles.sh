@@ -59,8 +59,8 @@ done
 
 touch ~/.bashrc
 
-touch ~/.starc
-: >~/.stabit
+# touch ~/.starc
+# : >~/.stabit
 
 # if ! grep -F 'if [ -f ~/.enterrc ]; then . ~/.enterrc; fi' <~/.bashrc; then
 #     echo 'if [ -f ~/.enterrc ]; then . ~/.enterrc; fi' >>~/.bashrc
@@ -79,18 +79,18 @@ if [ -f ${HOME}/.vscode-oss ]; then
     rm ${HOME}/.vscode-oss
 fi
 
-if ! grep -F 'touch ~/.stabit' <~/.bashrc; then
-    echo 'touch ~/.stabit' >>~/.bashrc
-fi
+# if ! grep -F 'touch ~/.stabit' <~/.bashrc; then
+#     echo 'touch ~/.stabit' >>~/.bashrc
+# fi
 
-if ! grep -F '_sta0(){ : >~/.stabit;}' <~/.bashrc; then
-    echo '_sta0(){ : >~/.stabit;}' >>~/.bashrc
-fi
+# if ! grep -F '_sta0(){ : >~/.stabit;}' <~/.bashrc; then
+#     echo '_sta0(){ : >~/.stabit;}' >>~/.bashrc
+# fi
 
-if ! grep -F '_sta1(){ echo A >~/.stabit;}' <~/.bashrc; then
-    echo '_sta1(){ echo A >~/.stabit;}' >>~/.bashrc
-fi
+# if ! grep -F '_sta1(){ echo A >~/.stabit;}' <~/.bashrc; then
+#     echo '_sta1(){ echo A >~/.stabit;}' >>~/.bashrc
+# fi
 
-if ! grep -F '_stae(){ cat ~/.stabit;}' <~/.bashrc; then
-    echo '_stae(){ cat ~/.stabit;}' >>~/.bashrc
-fi
+# if ! grep -F '_stae(){ cat ~/.stabit;}' <~/.bashrc; then
+#     echo '_stae(){ cat ~/.stabit;}' >>~/.bashrc
+# fi
