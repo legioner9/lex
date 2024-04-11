@@ -9,6 +9,7 @@ echo -e "${GREEN} start 5_first_copy_dotfiles.sh ${NORMAL}" #print variable
 if [[ -f ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st.rc.d.zip ]]; then
 
     rm ${HOME}/.st.rc.d.zip
+    rm ${HOME}/.st.rc.d
     cp ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st.rc.d.zip ${HOME}
     cd ${HOME}
     unzip ${HOME}/.st.rc.d.zip
@@ -22,6 +23,7 @@ fi
 if [[ -f ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st_rc_d.rc.zip ]]; then
 
     rm ${HOME}/.st_rc_d.rc.zip
+    rm ${HOME}/.st_rc_d.rc
     cp ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st_rc_d.rc.zip ${HOME}
     cd ${HOME}
     unzip ${HOME}/.st_rc_d.rc.zip
