@@ -9,7 +9,7 @@ echo -e "${GREEN} start 5_first_copy_dotfiles.sh ${NORMAL}" #print variable
 if [[ -f ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st.rc.d.zip ]]; then
 
     rm ${HOME}/.st.rc.d.zip
-    rm ${HOME}/.st.rc.d
+    rm -r ${HOME}/.st.rc.d
     cp ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st.rc.d.zip ${HOME}
     cd ${HOME}
     unzip ${HOME}/.st.rc.d.zip
@@ -68,8 +68,8 @@ touch ~/.bashrc
 #     echo 'if [ -f ~/.enterrc ]; then . ~/.enterrc; fi' >>~/.bashrc
 # fi
 
-if ! grep -F 'if [[ -f ~/.st.rc.d/.st.rc ]]; then . ~/.st.rc.d/.st.rc >/dev/null; fi' <~/.bashrc; then
-    echo 'if [[ -f ~/.st.rc.d/.st.rc ]]; then . ~/.st.rc.d/.st.rc >/dev/null; fi' >>~/.bashrc
+if ! grep -F 'if [[ -f ~/.st.rc.d/.st.rc ]]; then' <~/.bashrc; then
+    echo 'if [[ -f ~/.st.rc.d/.st.rc ]]; then if ! . ~/.st.rc.d/.st.rc ; then echo "in ~/.bashrc : FAIL . ~/.st.rc.d/.st.rc : return 1" >&2;return 1;fi fi' >>~/.bashrc
 fi
 
 #! if ! grep -F 'if [[ -f ~/.st.rc.d/.st.rc ]]; then . ~/.st.rc.d/.st.rc >/dev/null; fi' <~/.bashrc; then echo 'if [[ -f ~/.st.rc.d/.st.rc ]]; then . ~/.st.rc.d/.st.rc >/dev/null; fi' >>~/.bashrc; fi
