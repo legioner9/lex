@@ -31,7 +31,6 @@ repo_name_arr=(plt
     communis
     fonsh
     lex
-    sta
     mane
 )
 
