@@ -32,6 +32,14 @@ else
     read -p "NOT_FILE: ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st_rc_d.rc.zip mast ^C!!!"
 fi
 
+#****** CHECK ${HOME}/.w
+
+touch ${HOME}/.w
+
+echo "exec : cat file://${HOME}/.w"
+cat ${HOME}/.w
+read -p "CHECK this w+ or w- ?( WRITE with !!! )"
+
 #****** CHECK ${HOME}/.st_rc_d.path
 
 touch ${HOME}/.st_rc_d.path
