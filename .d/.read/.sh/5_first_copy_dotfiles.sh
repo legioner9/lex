@@ -4,6 +4,14 @@ echo -e "${GREEN} start 5_first_copy_dotfiles.sh ${NORMAL}" #print variable
 
 #! dot_repo_1234234 from plt_init_.sh = .repo
 
+if ! [[ -d ${HOME}/.d/.rc.d ]]; then
+    mkdir -p ${HOME}/.d/.rc.d
+fi
+
+if ! [[ -d ${HOME}/.d/.path.d ]]; then
+    mkdir -p ${HOME}/.d/.path.d
+fi
+
 #* UNZIP .st.rc.d
 
 if [[ -f ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st.rc.d.zip ]]; then
@@ -31,6 +39,14 @@ if [[ -f ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st_rc_d.rc.zip ]]; then
 else
     read -p "NOT_FILE: ${HOME}/REPOBARE/_repo/st_rc_d/.d/.zip/.st_rc_d.rc.zip mast ^C!!!"
 fi
+
+#****** CHECK ${HOME}/.w
+
+touch ${HOME}/.sta.path
+
+echo "exec : cat file://${HOME}/.sta.path"
+cat ${HOME}/.sta.path
+read -p "CHECK this path to repo ?( while examp : \${HOME}/REPOBARE/_repo/sta )"
 
 #****** CHECK ${HOME}/.w
 
