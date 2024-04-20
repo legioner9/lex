@@ -48,15 +48,25 @@ done
 
 read -p "INFO cloning into $(pwd) RIGHT? ENTER :: WRONG ^C"
 
-for item_reoo_name_arr in ${repo_name_arr[@]}; do
+for item_repo_name_arr in ${repo_name_arr[@]}; do
 
-    echo "git clone ${bare_path}/${item_reoo_name_arr}"
+    echo "git clone ${bare_path}/${item_repo_name_arr}"
 
-    git clone ${bare_path}/${item_reoo_name_arr} || {
-        read -p "IS_ERROR? fail: git clone git@gitflic.ru:legioner9/plt.git, continue"
+    git clone ${bare_path}/${item_repo_name_arr} || {
+        read -p "IS_ERROR? fail: git clone ${bare_path}/${item_repo_name_arr}, continue"
         continue
     }
 
+done
+
+for item_repo_name_arr in ${repo_name_arr[@]}; do
+    if [[ -f ${bare_path}/${item_repo_name_arr}/.repo.dpl ]]; then
+        . ${bare_path}/${item_repo_name_arr}/.repo.dpl || {
+            read -p "IS_ERROR? fail: . ${bare_path}/${item_repo_name_arr}/.repo.dpl, continue"
+        }
+    else
+        read -p "IS_ERROR? NOT_FILE: ${bare_path}/${item_repo_name_arr}/.repo.dpl, continue"
+    fi
 done
 
 # git clone git@gitflic.ru:legioner9/plt.git || {
