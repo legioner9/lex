@@ -15,11 +15,11 @@ if [[ "${RESET_PLT_FONSH_TO_DEFAULT_}" == "y" ]]; then
     rm -fvi "$HOME"/.repo_path
     rm -fvi "$HOME"/.enterrc
 
-    rm -fvi "$HOME"/.mane.path
-    rm -fvi "$HOME"/.mane.rc
+    # rm -fvi "$HOME"/.mane.path
+    # rm -fvi "$HOME"/.mane.rc
 
-    rm -fvi "$HOME"/.st_rc_d.path
-    rm -rvi "$HOME"/.st_rc_d.rc
+    # rm -fvi "$HOME"/.st_rc_d.path
+    # rm -rvi "$HOME"/.st_rc_d.rc
 
     read -p "DO? only 'y' remove strclib :: rm -rfv $HOME/.st.rc.d"
     read yes
