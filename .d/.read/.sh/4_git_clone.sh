@@ -60,8 +60,8 @@ for item_repo_name_arr in ${repo_name_arr[@]}; do
 done
 
 for item_repo_name_arr in ${repo_name_arr[@]}; do
-    if [[ -f ${bare_path}/${item_repo_name_arr}/.repo.dpl ]]; then
-        . ${bare_path}/${item_repo_name_arr}/.repo.dpl || {
+    if [[ -f ${bare_path}/${item_repo_name_arr}/.d/.repo.d/.repo.dpl ]]; then
+        . ${bare_path}/${item_repo_name_arr}/.d/.repo.d/.repo.dpl || {
             read -p "IS_ERROR? fail: . ${bare_path}/${item_repo_name_arr}/.repo.dpl, continue"
         }
     else
