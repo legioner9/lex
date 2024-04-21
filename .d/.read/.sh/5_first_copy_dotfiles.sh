@@ -88,7 +88,7 @@ read -p "CHECK this w+ or w- ?( WRITE with !!! )"
 # #******
 
 path_tar_dir="${dot_repo_1234234}/bcp_sys_"
-arr_tar_file=(enterrc repo_path plt_path fonsh_path pd_path pd_read)
+arr_tar_file=(enterrc bashrc bash_profile gitconfig repo_path plt_path fonsh_path pd_path pd_read)
 # arr_tar_file=(enterrc manerc st_rc_drc repo_path plt_path fonsh_path pd_path pd_read)
 # arr_tar_file=(enterrc manerc st.rc.d repo_path plt_path fonsh_path pd_path pd_read)
 
@@ -106,9 +106,9 @@ touch ~/.bashrc
 #     echo 'if [ -f ~/.enterrc ]; then . ~/.enterrc; fi' >>~/.bashrc
 # fi
 
-if ! grep -F 'if [[ -f ~/.st.rc.d/.st.rc ]]; then' <~/.bashrc; then
-    echo 'if [[ -f ~/.st.rc.d/.st.rc ]]; then if ! . ~/.st.rc.d/.st.rc ; then echo "in ~/.bashrc : FAIL . ~/.st.rc.d/.st.rc : return 1" >&2;return 1;fi fi' >>~/.bashrc
-fi
+#!! if ! grep -F 'if [[ -f ~/.d/.rc.d/.st.rc.d/.st.rc ]]; then' <~/.bashrc; then
+#!!     echo 'if [[ -f ~/.d/.rc.d/.st.rc.d/.st.rc ]]; then if ! . ~/.d/.rc.d/.st.rc.d/.st.rc ; then echo "in ~/.bashrc : FAIL . ~/.d/.rc.d/.st.rc.d/.st.rc : return 1" >&2;return 1;fi fi' >>~/.bashrc
+#!! fi
 
 #! if ! grep -F 'if [[ -f ~/.st.rc.d/.st.rc ]]; then . ~/.st.rc.d/.st.rc >/dev/null; fi' <~/.bashrc; then echo 'if [[ -f ~/.st.rc.d/.st.rc ]]; then . ~/.st.rc.d/.st.rc >/dev/null; fi' >>~/.bashrc; fi
 
