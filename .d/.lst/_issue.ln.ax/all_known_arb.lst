@@ -44,3 +44,6 @@ ${REPO_PATH}/NDocker/.d/.arb/off.arb
 ${REPO_PATH}/NDocker/.d/.arb/pau.arb
 ${REPO_PATH}/NDocker/.d/.arb/stu.arb 
 ${REPO_PATH}/NDocker/.d/.arb/man.arb
+
+${REPO_PATH}/NUML/.d/.arb/man.arb
+${REPO_PATH}/NUML/.d/.arb/doc.arb
