@@ -33,6 +33,8 @@ repo_name_arr=(plt
     fonsh
     lex
     mane
+    sta
+    stb
 )
 
 cd "$HOME"/REPOBARE/_repo || {
