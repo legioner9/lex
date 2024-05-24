@@ -1,6 +1,7 @@
 ${HOME}/.enterrc@enterrc
 ${HOME}/..d@dubledotd
 ${HOME}/.sd@dotds
+${HOME}/.foe@dotfoe
 
 #${HOME}/.mane.rc@manerc
 #${HOME}/.st.rc.d@st.rc.d
@@ -32,5 +33,7 @@ ${HOME}/.pd_read@pd_read
 
 ${HOME}/.config/Code/User/snippets@snp_code
 ${HOME}/.config/VSCodium/User/snippets@snp_codium
+
+${HOME}/.local/share/applications@lh_app
 
 #${HOME}/.rbenv@rbenv 
