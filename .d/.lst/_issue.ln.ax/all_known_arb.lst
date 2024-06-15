@@ -21,6 +21,8 @@ ${PLT_PATH}/.d/.arb/.sgm/html.sgm.arb
 
 ${PLT_PATH}/.d/.arb/.mitt/comm.mitt.arb
 ${REPO_PATH}/Nodus/.d/.arb/nodus.comm.mitt.arb
+${REPO_PATH}/ocl/.d/.arb/bsl.mitt.arb
+${REPO_PATH}/ocl/.d/.arb/sdbl.mitt.arb
 
 ${REPO_PATH}/NRuby/.arb/man
 ${REPO_PATH}/NRuby/.arb/gem
