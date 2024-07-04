@@ -19,7 +19,7 @@ ${PLT_PATH}/.d/.arb/gui.arb
 
 ${PLT_PATH}/.d/.arb/.sgm/html.sgm.arb
 
-${PLT_PATH}/.d/.arb/.mitt/comm.mitt.arb
+${ST_RC_D_DATA_PATH}/.d/.arb/.mitt/comm.mitt.arb
 ${REPO_PATH}/Nodus/.d/.arb/nodus.comm.mitt.arb
 ${REPO_PATH}/ocl/.d/.arb/bsl.mitt.arb
 ${REPO_PATH}/ocl/.d/.arb/sdbl.mitt.arb
