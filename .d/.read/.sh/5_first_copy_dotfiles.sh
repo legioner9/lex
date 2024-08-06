@@ -48,8 +48,6 @@ echo -e "${GREEN} start 5_first_copy_dotfiles.sh ${NORMAL}" #print variable
 # cat ${HOME}/.sta.path
 # read -p "CHECK this path to repo ?( while examp : \${HOME}/REPOBARE/_repo/sta )"
 
-
-
 if [[ -d ${HOME}/.d ]]; then
     mv ${HOME}/.d ${HOME}/.d~
 fi
@@ -65,9 +63,38 @@ unzip .d.zip
 #****** CHECK ${HOME}/.w
 touch ${HOME}/.w
 
+read -p "CHECK ${HOME}/.w define this: w+ or w- ?( WRITE with !!! )"
 echo "exec : cat file://${HOME}/.w"
 cat ${HOME}/.w
-read -p "CHECK this w+ or w- ?( WRITE with !!! )"
+
+#****** CHECK ${HOME}/.tmp_path
+# TMP_DIR_ST_RC
+touch ${HOME}/.tmp_dir_st_rc
+#!----------------------------------------------------------
+yes=
+read -p "write to ${HOME}/.tmp_dir_st_rc default \${HOME}/tmp_dir_st_rc ? ENTER only 'y' to DO " yes
+[[ "y" == "${yes}" ]] && {
+    echo "write \${HOME}/tmp_dir_st_rc >${HOME}/.tmp_dir_st_rc"
+    echo "\${HOME}/tmp_dir_st_rc" >"${HOME}"/.tmp_dir_st_rc
+}
+
+echo "exec : cat file://${HOME}/.tmp_dir_st_rc"
+cat ${HOME}/.tmp_dir_st_rc
+
+read -p "CHECK contane ${HOME}/.tmp_dir_st_rc with define \$TMP_DIR_ST_RC ?( WRITE with !!! )"
+
+echo "exec : cat file://${HOME}/.tmp_dir_st_rc"
+cat ${HOME}/.tmp_dir_st_rc
+
+#!----------------------------------------------------------
+yes=
+read -p "mkdir $(cat ${HOME}/.tmp_dir_st_rc) ? ENTER only 'y' to DO " yes
+
+[[ "y" == "${yes}" ]] && {
+    eval "default_dir=$(cat ${HOME}/.tmp_dir_st_rc)"
+    echo -e "${HLIGHT}--- mkdir ${default_dir} ---${NORMAL}" #start files
+    mkdir ${default_dir}
+}
 
 # #****** CHECK ${HOME}/.st_rc_d.path
 
