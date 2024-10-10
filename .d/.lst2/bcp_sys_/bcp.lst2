@@ -2,11 +2,13 @@ ${HOME}/.enterrc@enterrc
 ${HOME}/..d@dubledotd
 ${HOME}/.sd@dotds
 ${HOME}/.foe@dotfoe
+${HOME}/.skel.d@dotskeldotd
 
 #${HOME}/.mane.rc@manerc
 #${HOME}/.st.rc.d@st.rc.d
 #${HOME}/.st_rc_d.rc@st_rc_drc
 #${HOME}/.starc@starc
+
 
 ${HOME}/.bashrc@bashrc
 ${HOME}/.bash_profile@bash_profile
