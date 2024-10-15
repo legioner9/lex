@@ -11,6 +11,18 @@ echo -e "${GREEN} start 5_first_copy_dotfiles.sh ${NORMAL}" #print variable
 # if ! [[ -d ${HOME}/.d/.path.d ]]; then
 #     mkdir -p ${HOME}/.d/.path.d
 # fi
+#* gig ${HOME}/.stl/.path
+
+mkdir -p ${HOME}/.stl/.path
+
+arr_name_repo=($(cat ${PPWW_654fe0b9ed}/.sh/0_arr_path_to_libs.lst))
+
+echo -e "${GREEN}\${arr_name_repo[@]} = ${arr_name_repo[*]}${NORMAL}" #print variable
+
+echo "\${HOME}/REPOBARE/_repo/st_rc_d" >${HOME}/.stl/.path/st_rc_d.pat
+echo "\${HOME}/REPOBARE/_repo/sta" >${HOME}/.stl/.path/st_rc_d_data.pat
+echo "\${HOME}/REPOBARE/_repo/mane" >${HOME}/.stl/.path/mane.pat
+echo "\${HOME}/REPOBARE/_repo/stb" >${HOME}/.stl/.path/mane_data.pat
 
 # #* UNZIP .st.rc.d
 
