@@ -1,0 +1,39 @@
+## start init
+
+cd <root_dir>
+. plt_init.sh
+
+### puml: <root_dir>/_puml/plt_init.sh.puml
+### dir with flow: <root_dir>/.sh
+### dir with zip: <root_dir>/.zip
+
+## kde
+
+### sleep mode depricate
+
+### install from eepm gui:
+
+#### telegram
+
+### mm_dogit
+25 (edit clr)
+11 (CARPPAFCP CLR)
+
+### hot keys:
+
+#### mate-terminal F2
+#### codium F3
+#### yandex-browser-stable F4
+
+ 
+
+### mm_tsf_fsf_ 
+#### codium 
+#### code 
+#### sitelocal
+
+
+
+### mm_dpl
+
+

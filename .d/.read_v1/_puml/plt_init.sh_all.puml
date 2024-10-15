@@ -1,0 +1,79 @@
+@startuml
+
+scale 1000*500
+autonumber 
+
+participant T1
+participant sys 
+participant HOME
+participant ".bashrc"
+participant "У меня очень\nдлинное имя" as L #99FF99
+
+participant Participant [
+    =Title
+    ----
+    ""SubTitle""
+]
+
+note left [[http://plantuml.com/start]]
+  a note with a link
+end note
+
+== 1_upd_all_alt ==
+ref over HOME
+epm full-upgrad
+
+apt-get install
+epm play yandex-
+end ref
+
+newpage
+
+== 2_reset_plt_fonsh ==
+ref over HOME : rm -f "$HOME"/ REPOBARE/ .fonsh_path .plt_path .repo_path
+== 3_git_init ==
+ref over HOME
+rm -rf ${HOME}/.ssh
+unzip ${HOME}/read.zip -d ${HOME}
+end ref
+== 4_git_clone ==
+github -> HOME: clone git@github.com: plt, communis, fonsh
+note right
+<code>
+main() {
+printf("Hello world");
+}
+</code>
+[[http://plantuml.com{Optional tooltip} This label is printed]]
+end note
+== 5_first_copy_dotfiles ==
+"plt/.d/.repo/bcp_sys_/" -> HOME:tar -xzvf repo_path plt_path fonsh_path
+ref over ".bashrc" : -> ".bashrc":add str: . ~/.fonshrc . ~/.pltrc
+ref over HOME : rm ${HOME}/.vscode-oss
+== 6_first_start_bash ==
+ref over sys
+. $HOME/.bashrc
+
+
+bcp_l2d_ -_bcp bashrc
+bcp_sys_ -_dpl
+apt_alt_ 1
+end ref
+
+    group My own label
+    sys -> sys : Log attack start
+        loop 1000 times
+            sys -> sys: DNS Attack
+        end
+    sys -> sys : Log attack end
+    end
+    critical that ERROR 
+    sys -> sys : Log attack start
+        loop 1000 times
+            sys -> sys: DNS Attack
+        end
+    sys -> sys : Log attack end
+    end 
+
+
+@enduml

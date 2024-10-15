@@ -1,0 +1,5 @@
+git clone https://github.com/legioner9/lex.git
+git clone git@github.com:legioner9/lex.git
+
+git clone https://gitflic.ru/project/legioner9/lex.git
+git clone git@gitflic.ru:legioner9/lex.git
