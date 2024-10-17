@@ -19,10 +19,10 @@ arr_name_repo=($(cat ${PPWW_654fe0b9ed}/.sh/0_arr_path_to_libs.lst))
 
 echo -e "${GREEN}\${arr_name_repo[@]} = ${arr_name_repo[*]}${NORMAL}" #print variable
 
-echo "\${HOME}/REPOBARE/_repo/st_rc_d" >${HOME}/.stl/.path/st_rc_d.pat
-echo "\${HOME}/REPOBARE/_repo/sta" >${HOME}/.stl/.path/st_rc_d_data.pat
-echo "\${HOME}/REPOBARE/_repo/mane" >${HOME}/.stl/.path/mane.pat
-echo "\${HOME}/REPOBARE/_repo/stb" >${HOME}/.stl/.path/mane_data.pat
+echo "\${HOME}/REPOBARE/_repo/st_rc_d" >${HOME}/.stl/.path/st_rc_d.path
+echo "\${HOME}/REPOBARE/_repo/sta" >${HOME}/.stl/.path/st_rc_d_data.path
+echo "\${HOME}/REPOBARE/_repo/mane" >${HOME}/.stl/.path/mane.path
+echo "\${HOME}/REPOBARE/_repo/stb" >${HOME}/.stl/.path/mane_data.path
 
 # #* UNZIP .st.rc.d
 
