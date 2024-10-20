@@ -4,6 +4,7 @@ ${HOME}/.sd@dotds
 ${HOME}/.foe@dotfoe
 ${HOME}/.skel.d@dotskeldotd
 ${HOME}/.stl@dotstl
+${HOME}/.stl.d@dotstldotd
 
 #${HOME}/.mane.rc@manerc
 #${HOME}/.st.rc.d@st.rc.d
