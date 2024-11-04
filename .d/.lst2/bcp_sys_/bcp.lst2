@@ -40,6 +40,7 @@ ${HOME}/.config/VSCodium/User/snippets@snp_codium
 ${HOME}/.config/mc@mc_config
 ${HOME}/.config/mimeapps.list@mimeapps_list
 
-${HOME}/.local/share/applications@lh_app
 
+${HOME}/.local/share/applications@lh_app
+${HOME}/.local/share/mc@loc_sh_mc
 #${HOME}/.rbenv@rbenv 
