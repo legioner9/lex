@@ -10,5 +10,5 @@ _init_boot_() {
         "https://raw.githubusercontent.com/legioner9/stl/refs/heads/master/"
     )
 
-    select 
+    # select 
 }
