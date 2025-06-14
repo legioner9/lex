@@ -1,0 +1,10 @@
+# $1 path to that dr
+
+[[ -n "$1" ]] || {
+   echo "arg - full path to that dir"
+   return 1
+}
+
+cd "$1"
+
+unzip -e ifo.zip
