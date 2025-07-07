@@ -12,5 +12,3 @@ rm ifo.zip
 zip -e -r ifo.zip ifo
 
 rm -r ifo
-
-
